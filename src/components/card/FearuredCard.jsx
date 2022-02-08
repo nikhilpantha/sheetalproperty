@@ -3,7 +3,7 @@ import { FiHeart } from "react-icons/fi";
 
 const FearuredCard = () => {
   return (
-    <div className="w-80 relative bg-white rounded-md shadow-lg">
+    <div className="w-56 sm:w-80 relative bg-white rounded-md shadow-lg">
       <div className="-mt-3 rounded px-2 absolute top-0 bg-red-700 text-white uppercase">
         For sale
       </div>
@@ -11,7 +11,7 @@ const FearuredCard = () => {
         <img
           src="unsplash.png"
           alt="unsplash"
-          className="w-full bg-center h-56"
+          className="w-full bg-center h-44 sm:h-56"
         />
         <div className="px-3 py-5 space-y-3">
           <div className="flex justify-between items-center">

@@ -8,26 +8,28 @@ import PropertiesInNepal from "./PropertiesInNepal";
 
 const Footer = () => {
   return (
-    <>
-      <div className="p-10 bg-stone-700 grid grid-cols-12 gap-5">
-        <div className="col-span-4">
+    <div className="flex flex-col xl:items-center bg-stone-700">
+      <div className="px-5 py-10 md:p-10  grid grid-cols-1 lg:grid-cols-7 gap-10 lg:gap-5 max-w-[1440px]">
+        <div className="   lg:col-span-2 xl:col-span-2">
           <MainContent />
         </div>
-        <div className="col-span-2">
+        <div className=" lg:col-span-1">
           <OurServices />
         </div>
-        <div className="col-span-2">
+        <div className="lg:col-span-1">
           <PropertiesInNepal />
         </div>
-        <div className="col-span-2">
+        <div className="lg:col-span-1">
           <Pages />
         </div>
-        <div className="col-span-2">
+        <div className="lg:col-span-3 xl:col-span-2">
           <Contact />
         </div>
       </div>
-      <LowerFooter />
-    </>
+      <div className="w-full bg-white">
+        <LowerFooter />
+      </div>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const TopPojectCard = () => {
   return (
-    <div className="w-80 bg-white rounded-md shadow-lg border border-gray-100">
+    <div className="w-full bg-white rounded-md shadow-lg border border-gray-100">
       <div className="rounded-md overflow-hidden">
         <img
           src="unsplash.png"
@@ -11,7 +11,7 @@ const TopPojectCard = () => {
         />
         <div className="px-3 py-5 space-y-3">
           <h1 className="font-semibold">Budhanilkantha View Tower</h1>
-          <ul className="text-gray-600 text-sm space-y-3">
+          <ul className="text-gray-600 text-xs sm:text-sm space-y-3">
             <li>by Shetal Real State</li>
             <li>Kathmandu, Nepal</li>
             <li>Vacation House</li>

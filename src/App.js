@@ -7,16 +7,17 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
+    <div className="bg-gray-100">
       <Router>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-
+        <div className="mx-auto max-w-[1440px] bg-white">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
-    </>
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ export const CustomRightArrow = ({ onClick }) => {
     <button
       type="button"
       onClick={() => onClick()}
-      className="absolute bottom-0 right-10  focus:outline-none"
+      className="absolute bottom-0 right-1 md:right-10  focus:outline-none"
     >
       <BsArrowRightCircle className="h-10 w-10 text-gray-800" />
     </button>

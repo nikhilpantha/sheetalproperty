@@ -3,7 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const AdviceToolsCard = () => {
   return (
-    <div className="w-80 bg-white rounded-md shadow-lg border border-gray-100">
+    <div className="w-56 sm:w-80 bg-white rounded-md shadow-lg border border-gray-100">
       <div className="rounded-md overflow-hidden">
         <img
           src="undraw_At_work_re_qotl1.png"

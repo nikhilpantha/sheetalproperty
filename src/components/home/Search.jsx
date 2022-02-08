@@ -4,8 +4,8 @@ import { FaSearch } from "react-icons/fa";
 const Search = () => {
   return (
     <>
-      <div className="flex justify-center">
-        <div className="w-3/5 -mt-20 bg-white rounded shadow border border-gray-100 p-10 space-y-5">
+      <div className="flex justify-center px-10">
+        <div className="w-full xl:w-3/5 -mt-20 bg-white rounded shadow border border-gray-100 p-10 space-y-5">
           <ul className="flex items-center justify-between font-semibold px-5">
             <li>Buy</li>
             <li>Rent</li>

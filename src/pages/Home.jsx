@@ -9,12 +9,12 @@ const Home = () => {
   return (
     <div className="space-y-10 pb-20">
       <div
-        className="w-full h-96 flex items-center justify-center bg-no-repeat bg-cover bg-bottom"
+        className="w-full h-96 flex items-center justify-center bg-no-repeat bg-cover bg-center px-5"
         style={{
-          backgroundImage: `url("images.jpeg")`,
+          backgroundImage: `url("349872.jpeg")`,
         }}
       >
-        <h1 className="text-4xl font-semibold capitalize text-white">
+        <h1 className="md:text-4xl text-3xl font-semibold capitalize text-white">
           Search Nepal’s home of property
         </h1>
       </div>

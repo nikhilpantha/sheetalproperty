@@ -5,7 +5,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const MainContent = () => {
   return (
-    <div className="space-y-10 w-1/2">
+    <div className="space-y-10 xl:w-2/3">
       <img src="shetallogo.png" alt="footerlogo" className="w-28 h-16" />
       <p className="text-sm text-white">
         Shetal Real State is a company that helps you find your dream home.
