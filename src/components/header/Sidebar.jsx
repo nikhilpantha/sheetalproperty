@@ -1,11 +1,10 @@
 import React from "react";
 import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import {
   CalendarIcon,
   ChartBarIcon,
   FolderIcon,
-  HomeIcon,
   InboxIcon,
   MenuIcon,
   UsersIcon,
@@ -16,12 +15,48 @@ const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navigation = [
-    { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-    { name: "Team", href: "#", icon: UsersIcon, current: false },
-    { name: "Projects", href: "#", icon: FolderIcon, current: false },
-    { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-    { name: "Documents", href: "#", icon: InboxIcon, current: false },
-    { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
+    {
+      name: "Find Property",
+      icon: UsersIcon,
+      current: false,
+      children: [
+        { name: "Buy", href: "#" },
+        { name: "Rent", href: "#" },
+        { name: "House and land", href: "#" },
+        { name: "new house", href: "#" },
+        { name: "rural", href: "#" },
+      ],
+    },
+    {
+      name: "Property Demand",
+      icon: FolderIcon,
+      current: false,
+      children: [
+        { name: "Overview", href: "#" },
+        { name: "Members", href: "#" },
+        { name: "Calendar", href: "#" },
+        { name: "Settings", href: "#" },
+      ],
+    },
+    {
+      name: "Requirement form",
+      icon: CalendarIcon,
+      current: false,
+    },
+    {
+      name: "Find Agen",
+      icon: InboxIcon,
+      current: false,
+    },
+    {
+      name: "For Owners",
+      icon: ChartBarIcon,
+      current: false,
+      children: [
+        { name: "My Property", href: "#" },
+        { name: "sell", href: "#" },
+      ],
+    },
   ];
 
   function classNames(...classes) {
@@ -30,14 +65,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-        
-        ```
-        <html class="h-full">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -92,36 +119,83 @@ const Sidebar = () => {
                 <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                   <div className="flex-shrink-0 flex items-center px-4">
                     <img
-                      className="h-10 w-auto"
+                      className="h-14 w-auto"
                       src="shetallogo.png"
                       alt="Workflow"
                     />
                   </div>
-                  <nav className="mt-5 px-2 space-y-1">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-100 text-gray-900"
-                            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                        )}
-                      >
-                        <item.icon
-                          className={classNames(
-                            item.current
-                              ? "text-gray-500"
-                              : "text-gray-400 group-hover:text-gray-500",
-                            "mr-4 flex-shrink-0 h-6 w-6"
-                          )}
-                          aria-hidden="true"
-                        />
-                        {item.name}
-                      </a>
-                    ))}
-                  </nav>
+                  <div className="mt-5 flex-grow flex flex-col">
+                    <nav
+                      className="flex-1 px-2 space-y-1 bg-white"
+                      aria-label="Sidebar"
+                    >
+                      {navigation.map((item) =>
+                        !item.children ? (
+                          <div key={item.name}>
+                            <a
+                              href="/"
+                              className={classNames(
+                                item.current
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                                "group w-full flex items-center pl-2 py-2 text-sm font-medium rounded-md"
+                              )}
+                            >
+                              {item.name}
+                            </a>
+                          </div>
+                        ) : (
+                          <Disclosure
+                            as="div"
+                            key={item.name}
+                            className="space-y-1"
+                          >
+                            {({ open }) => (
+                              <>
+                                <Disclosure.Button
+                                  className={classNames(
+                                    item.current
+                                      ? "bg-gray-100 text-gray-900"
+                                      : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                                    "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none "
+                                  )}
+                                >
+                                  <span className="flex-1">{item.name}</span>
+                                  <svg
+                                    className={classNames(
+                                      open
+                                        ? "text-gray-400 rotate-90"
+                                        : "text-gray-300",
+                                      "ml-3 flex-shrink-0 h-5 w-5 transform group-hover:text-gray-400 transition-colors ease-in-out duration-150"
+                                    )}
+                                    viewBox="0 0 20 20"
+                                    aria-hidden="true"
+                                  >
+                                    <path
+                                      d="M6 6L14 10L6 14V6Z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                </Disclosure.Button>
+                                <Disclosure.Panel className="space-y-1">
+                                  {item.children.map((subItem) => (
+                                    <Disclosure.Button
+                                      key={subItem.name}
+                                      as="a"
+                                      href={subItem.href}
+                                      className="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                                    >
+                                      {subItem.name}
+                                    </Disclosure.Button>
+                                  ))}
+                                </Disclosure.Panel>
+                              </>
+                            )}
+                          </Disclosure>
+                        )
+                      )}
+                    </nav>
+                  </div>
                 </div>
                 <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
                   <a href="/" className="flex-shrink-0 group block">
