@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./pages/Home";
+import RequirementForm from "./pages/RequirementForm";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div className="mx-auto max-w-[1440px] bg-white">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/requirementForm" element={<RequirementForm />} />
           </Routes>
         </div>
         <Footer />
