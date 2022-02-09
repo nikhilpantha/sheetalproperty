@@ -11,7 +11,7 @@ const ExtraValue = () => {
           property
         </p>
         <div>
-          <button className="text-sm text-white bg-green-500 rounded p-1">
+          <button className="text-xs font-bold text-white bg-green-500 rounded py-1 px-3">
             free
           </button>
         </div>
