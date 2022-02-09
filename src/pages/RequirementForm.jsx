@@ -185,6 +185,9 @@ const RequirementForm = () => {
               placeholder="Enter your name"
             />
           </label>
+          <button className="bg-red-700 px-10 md:px-24  p-3 font-bold text-white rounded-lg">
+            Submit
+          </button>
         </from>
       </div>
     </div>

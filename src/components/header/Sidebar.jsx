@@ -217,7 +217,7 @@ const Sidebar = () => {
           </Dialog>
         </Transition.Root>
 
-        <div className="px-5 flex justify-between items-center">
+        <div className="px-5 flex justify-between items-center py-2 shadow-xl border-b border-gray-100">
           <img src="shetallogo.png" alt="" className="w-20 h-12" />
           <div className="sticky top-0 right-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-white">
             <button

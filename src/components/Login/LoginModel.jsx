@@ -50,7 +50,7 @@ const LoginModel = ({ r, setR }) => {
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <div className="inline-block align-bottom bg-white rounded text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-              <div className="hidden sm:block absolute t0op-0 right-0 pr-4 pt-4">
+              {/* <div className="hidden sm:block absolute t0op-0 right-0 pr-4 pt-4">
                 <button
                   type="button"
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -59,7 +59,7 @@ const LoginModel = ({ r, setR }) => {
                   <span className="sr-only">Close</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-              </div>
+              </div> */}
 
               <Tab.Group>
                 <Tab.List className="flex p-1 space-x-1 bg-red-700 text-white ">
@@ -68,7 +68,7 @@ const LoginModel = ({ r, setR }) => {
                       key={category}
                       className={({ selected }) =>
                         classNames(
-                          "w-full py-2.5 text-lg leading-5 font-medium text-white",
+                          "w-full py-5 text-lg leading-5 font-medium text-white",
                           "focus:outline-none",
                           selected ? "border-b-2 border-white" : ""
                         )

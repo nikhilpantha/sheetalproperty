@@ -39,7 +39,7 @@ const MainNavBar = () => {
       {navigation.map((item) => (
         <Menu as="div" className="text-left">
           <div className="flex">
-            <Menu.Button className="inline-flex justify-center w-full text-white px-4 py-2 font-medium hover:border-b-2 hover:border-white">
+            <Menu.Button className="inline-flex items-center justify-center w-full text-white px-4 py-2 font-medium hover:border-b-2 hover:border-white">
               {item.title}
               {item.subTitle.length > 0 && (
                 <RiArrowDownSLine
