@@ -4,27 +4,30 @@ import LoginModel from "../Login/LoginModel";
 
 const TopBar = () => {
   const [r, setR] = useState(false);
-  useEffect(() => {
-    return () => {};
-  }, [setR]);
 
   return (
     <>
-      <div className="px-10 py-3 shadow flex justify-between items-center">
-        <img src="shetallogo.png" alt="shetallogo.png" className="w-32 h-16" />
+      <div className="px-5 lg:px-10 py-3 shadow flex justify-between items-center">
+        <a href="/">
+          <img
+            src="shetallogo.png"
+            alt="shetallogo.png"
+            className="w-36 h-auto"
+          />
+        </a>
         <div className="flex space-x-7 items-center">
           <button
             onClick={() => {
               setR(true);
             }}
-            className="text-red-700 capitalize font-semibold flex items-center space-x-2"
+            className="text-red-700 text-xl capitalize flex items-center space-x-2"
           >
             <span>Login / Register</span>
             <RiArrowDownSLine className="w-5 h-5" />
           </button>
           <a
             href="/"
-            className="px-4 py-2 bg-red-700 text-white capitalize rounded-md"
+            className="px-5 py-3 bg-red-700 text-xl text-white capitalize rounded-lg"
           >
             post property{" "}
           </a>

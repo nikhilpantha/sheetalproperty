@@ -28,7 +28,7 @@ const Details = () => {
     report: "Sold Outs",
   };
   return (
-    <div className="md:grid grid-cols-12 items-center  gap-10 py-10 px-5 md:px-10 md:pl-10">
+    <div className="md:grid grid-cols-12 items-center gap-10 pt-24 py-10 px-5 lg:pl-10">
       <img
         src="unsplash.png"
         alt="unsplash"
@@ -75,7 +75,7 @@ const Details = () => {
             <span className="font-semibold text-lg">{product.parking}</span>
           </div>
         </div>
-        <div className="flex space-x-5 items-center">
+        <div className="flex flex-col sm:flex-row space-y-5 sm:space-x-5  sm:space-y-0 sm:items-center">
           <button className="px-5 py-3 text-white font-bold bg-red-700 rounded-lg">
             Contact Owner
           </button>

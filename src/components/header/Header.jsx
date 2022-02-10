@@ -5,8 +5,8 @@ import TopBar from "./TopBar";
 
 const Header = () => {
   return (
-    <div>
-      <div className="hidden md:block">
+    <div className="sticky top-0 right-0 left-0 z-10">
+      <div className="hidden lg:block">
         <div className="bg-white">
           <div className="mx-auto max-w-[1440px] ">
             <TopBar />
@@ -18,7 +18,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="block md:hidden bg-white">
+      <div className="block lg:hidden bg-white">
         <Sidebar />
       </div>
     </div>

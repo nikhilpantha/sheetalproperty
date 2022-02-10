@@ -3,7 +3,7 @@ import React from "react";
 const OurServices = () => {
   return (
     <div className="text-white">
-      <ul className="space-y-3">
+      <ul className="space-y-3 capitalize">
         <li>
           <a href="/">Our services</a>
         </li>

@@ -6,12 +6,12 @@ import { responsive } from "../carousel/Responsive";
 
 const Property = () => {
   return (
-    <>
-      <div className="pt-16 px-5 md:px-10">
+    <div className="px-5 md:px-10 pt-16">
+      <div className="">
         <h1 className="pb-3 text-3xl font-light">Property Services</h1>
         <p className="bg-red-700 h-0.5 w-16"></p>
       </div>
-      <div className="px-2 md:px-10 md:py-5">
+      <div className="py-10 md:py-16">
         <Carousel
           responsive={responsive}
           customRightArrow={<CustomRightArrow />}
@@ -31,7 +31,7 @@ const Property = () => {
           <PropertyCard />
         </Carousel>
       </div>
-    </>
+    </div>
   );
 };
 

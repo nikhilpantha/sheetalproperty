@@ -7,9 +7,9 @@ export const CustomRightArrow = ({ onClick }) => {
     <button
       type="button"
       onClick={() => onClick()}
-      className="absolute bottom-0 right-1 md:right-10  focus:outline-none"
+      className="absolute bottom-0 right-1  focus:outline-none"
     >
-      <BsArrowRightCircle className="h-10 w-10 text-gray-800" />
+      <BsArrowRightCircle className="h-10 w-10 text-gray-600" />
     </button>
   );
 };
@@ -21,7 +21,7 @@ export const CustomLeftArrow = ({ onClick }) => {
       onClick={() => onClick()}
       className="absolute bottom-0 left-1  focus:outline-none"
     >
-      <BsArrowLeftCircle className="h-10 w-10 text-gary-800" />
+      <BsArrowLeftCircle className="h-10 w-10 text-gray-600" />
     </button>
   );
 };

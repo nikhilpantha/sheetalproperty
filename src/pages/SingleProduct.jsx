@@ -10,6 +10,7 @@ const SingleProduct = () => {
   return (
     <div className="pb-10">
       <UserHead />
+
       <Details />
       <Description />
       <ExtraValue />

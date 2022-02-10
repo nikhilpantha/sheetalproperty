@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import {
@@ -10,8 +10,10 @@ import {
   UsersIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import LoginModel from "../Login/LoginModel";
 
 const Sidebar = () => {
+  const [r, setR] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navigation = [
@@ -69,7 +71,7 @@ const Sidebar = () => {
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
             as="div"
-            className="fixed inset-0 flex z-40 md:hidden"
+            className="fixed inset-0 flex z-40 lg:hidden"
             onClose={setSidebarOpen}
           >
             <Transition.Child
@@ -198,16 +200,22 @@ const Sidebar = () => {
                   </div>
                 </div>
                 <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-                  <a href="/" className="flex-shrink-0 group block">
+                  <div className="flex-shrink-0 group block">
                     <div className="flex items-center justify-center space-x-3 text-sm">
-                      <div className="border-2 rounded-lg border-red-500 p-2 ">
+                      <button
+                        onClick={() => {
+                          setR(true);
+                          setSidebarOpen(false);
+                        }}
+                        className="border-2 rounded-lg border-red-500 p-2 "
+                      >
                         Login / Register
-                      </div>
+                      </button>
                       <div className="border-2 rounded-lg border-red-500 p-2 text-white bg-red-500">
                         Post Property
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </Transition.Child>
@@ -218,19 +226,22 @@ const Sidebar = () => {
         </Transition.Root>
 
         <div className="px-5 flex justify-between items-center py-2 shadow-xl border-b border-gray-100">
-          <img src="shetallogo.png" alt="" className="w-20 h-12" />
-          <div className="sticky top-0 right-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-white">
+          <a href="/">
+            <img src="shetallogo.png" alt="" className="w-28 h-auto" />
+          </a>
+          <div className="z-10 lg:hidden sm:pl-3 sm:pt-3 bg-white">
             <button
               type="button"
-              className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none "
+              className="h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <MenuIcon className="h-8 w-8" aria-hidden="true" />
             </button>
           </div>
         </div>
       </div>
+      {r && <LoginModel r={r} setR={setR} />}
     </>
   );
 };

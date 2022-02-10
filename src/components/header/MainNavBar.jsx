@@ -6,26 +6,32 @@ import { RiArrowDownSLine } from "react-icons/ri";
 const MainNavBar = () => {
   const navigation = [
     {
+      link: "/",
       title: "Find Property",
       subTitle: ["Buy", "Rent", "House and land", "new house", "rural"],
     },
     {
+      link: "/",
       title: "Property Service",
       subTitle: ["Buy", "Rent", "House and land", "new house", "rural"],
     },
     {
+      link: "/",
       title: "Property Demand",
       subTitle: [],
     },
     {
+      link: "/requirementForm",
       title: "Requirement form",
       subTitle: [],
     },
     {
+      link: "/findAgent",
       title: "Find Agent",
       subTitle: [],
     },
     {
+      link: "/",
       title: "For Owners",
       subTitle: ["Buy", "Rent", "House and land", "new house", "rural"],
     },
@@ -35,17 +41,18 @@ const MainNavBar = () => {
   }
 
   return (
-    <div className="bg-red-700 px-10 h-16 py-2 flex items-center justify-between">
+    <div className="bg-red-700 px-5 lg:px-10 h-16 py-2 flex space-x-2 items-center justify-between">
       {navigation.map((item) => (
         <Menu as="div" className="text-left">
           <div className="flex">
-            <Menu.Button className="inline-flex items-center justify-center w-full text-white px-4 py-2 font-medium hover:border-b-2 hover:border-white">
-              {item.title}
-              {item.subTitle.length > 0 && (
-                <RiArrowDownSLine
-                  className="-mr-1 ml-2 h-5 w-5"
-                  aria-hidden="true"
-                />
+            <Menu.Button className="inline-flex items-center justify-start text-lg w-full text-white py-2 hover:border-b-2 hover:border-white">
+              {item.subTitle.length > 0 ? (
+                <>
+                  {item.title}
+                  <RiArrowDownSLine className=" h-7 w-7" aria-hidden="true" />
+                </>
+              ) : (
+                <a href={item.link}>{item.title}</a>
               )}
             </Menu.Button>
           </div>

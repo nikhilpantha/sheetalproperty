@@ -2,8 +2,8 @@ import React from "react";
 
 const TopPojectCard = () => {
   return (
-    <div className="w-full bg-white rounded-md shadow-lg border border-gray-100">
-      <div className="rounded-md overflow-hidden">
+    <div className="w-full bg-white rounded-md shadow-lg border-2 border-gray-200 overflow-hidden">
+      <div className=" ">
         <img
           src="unsplash.png"
           alt="unsplash"
