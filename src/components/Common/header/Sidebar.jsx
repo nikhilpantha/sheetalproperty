@@ -10,7 +10,7 @@ import {
   UsersIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import LoginModel from "../Login/LoginModel";
+import LoginModel from "../../Login/LoginModel";
 
 const Sidebar = () => {
   const [r, setR] = useState(false);

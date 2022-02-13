@@ -3,14 +3,14 @@ import { FaLock, FaUserAlt } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="p-3">
+    <div className="p-3 text-sm">
       <form className="w-full space-y-5">
         <div className="border-2 border-gray-400 rounded-lg overflow-hidden">
           <label className="flex space-x-3 border-b-2 border-gray-400 p-3 items-center">
             <FaUserAlt className="w-5 h-5 text-gray-400" />
             <input
               type="text"
-              className="w-full text-xl focus:outline-none"
+              className="w-full focus:outline-none"
               placeholder="Username or Email"
             />
           </label>
@@ -19,7 +19,7 @@ const Login = () => {
             <FaLock className="w-5 h-5 text-gray-400" />
             <input
               type="Password"
-              className="w-full text-xl focus:outline-none"
+              className="w-full focus:outline-none"
               placeholder="Password"
             />
           </label>

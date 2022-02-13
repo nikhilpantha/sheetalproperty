@@ -1,11 +1,12 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/header/Header";
+import Footer from "./components/Common/Footer/Footer";
+import Header from "./components/Common/header/Header";
 import Home from "./pages/Home";
 import RequirementForm from "./pages/RequirementForm";
 import SingleProduct from "./pages/SingleProduct";
+import HomeLone from "./pages/HomeLone";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/requirementForm" element={<RequirementForm />} />
             <Route path="/singleProduct" element={<SingleProduct />} />
+            <Route path="/homeLone" element={<HomeLone />} />
           </Routes>
         </div>
         <Footer />

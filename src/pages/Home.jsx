@@ -18,7 +18,7 @@ const Home = () => {
           Search Nepal’s home of property
         </h1>
       </div>
-      {/* <Search /> */}
+      <Search />
       <Featured />
       <Property />
       <TopProjects />

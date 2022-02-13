@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import { Dialog, Tab, Transition } from "@headlessui/react";
-import { ExclamationIcon, XIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/outline";
 import Register from "./Register";
 import Login from "./Login";
 
@@ -21,7 +21,7 @@ const LoginModel = ({ r, setR }) => {
         className="fixed z-10 inset-0 overflow-y-auto"
         onClose={setR}
       >
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-end justify-center min-h-screen sm:pt-4 sm:px-4 sm:pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -49,7 +49,7 @@ const LoginModel = ({ r, setR }) => {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block align-bottom bg-white rounded text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div className="inline-block align-bottom bg-white rounded text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full h-screen sm:h-auto">
               <Tab.Group>
                 <Tab.List className="flex p-1 space-x-1 bg-red-700 text-white ">
                   {Object.keys(categories).map((category) => (
@@ -57,7 +57,7 @@ const LoginModel = ({ r, setR }) => {
                       key={category}
                       className={({ selected }) =>
                         classNames(
-                          "w-full py-5 mx-3 text-lg leading-5 font-medium text-white",
+                          "w-full py-4 mx-3 leading-5 font-medium text-white",
                           "focus:outline-none",
                           selected ? "border-b-2 border-white" : ""
                         )

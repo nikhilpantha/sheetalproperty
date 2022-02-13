@@ -6,7 +6,7 @@ import { responsive } from "../carousel/Responsive";
 
 const Featured = () => {
   return (
-    <div className="px-5 md:px-10 pt-16">
+    <div className="px-5 lg:px-10 pt-16">
       <div className="">
         <h1 className="pb-3 text-3xl">Featured Properties</h1>
         <p className="bg-red-700 h-1 w-16"></p>

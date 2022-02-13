@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
-import LoginModel from "../Login/LoginModel";
+import LoginModel from "../../Login/LoginModel";
 
 const TopBar = () => {
   const [r, setR] = useState(false);

@@ -9,7 +9,7 @@ export const TopProjects = () => {
         <h1 className="pb-3 text-3xl font-light">Top Product</h1>
         <p className="bg-red-700 h-0.5 w-16"></p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 md:px-16 md:py-5 gap-5 xl:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 lg:px-10 md:py-5 gap-5 xl:gap-10">
         <TopProjectCard />
         <TopProjectCard />
         <TopProjectCard />
