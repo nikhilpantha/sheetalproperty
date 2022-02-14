@@ -20,14 +20,14 @@ const TopBar = () => {
             onClick={() => {
               setR(true);
             }}
-            className="text-red-700 text-xl capitalize flex items-center space-x-2"
+            className="text-red-700 text-lg capitalize flex items-center space-x-2"
           >
             <span>Login / Register</span>
             <RiArrowDownSLine className="w-5 h-5" />
           </button>
           <a
             href="/"
-            className="px-5 py-3 bg-red-700 text-xl text-white capitalize rounded-lg"
+            className="px-5 py-3 bg-red-700 text-lg text-white capitalize rounded-lg"
           >
             post property{" "}
           </a>

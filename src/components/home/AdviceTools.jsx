@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { CustomRightArrow, CustomLeftArrow } from "../carousel/CustomeButton";
 import { responsive } from "../carousel/Responsive";
+import { advanceTools } from "../Object/advanceTools";
 
 const AdviceTools = () => {
   return (
@@ -19,14 +20,9 @@ const AdviceTools = () => {
           customLeftArrow={<CustomLeftArrow />}
           className="pb-16"
         >
-          <AdviceToolsCard />
-          <AdviceToolsCard />
-          <AdviceToolsCard />
-          <AdviceToolsCard />
-          <AdviceToolsCard />
-          <AdviceToolsCard />
-          <AdviceToolsCard />
-          <AdviceToolsCard />
+          {advanceTools.map((item, index) => (
+            <AdviceToolsCard item={item} key={index} />
+          ))}
         </Carousel>
       </div>
     </div>

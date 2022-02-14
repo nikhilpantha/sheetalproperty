@@ -24,7 +24,7 @@ function App() {
             <Route path="/homeLone" element={<HomeLone />} />
             <Route path="/payRentOnline" element={<PayRentOnline />} />
             <Route path="/legalHelp" element={<LegelHepl />} />
-            <Route path="/emiCalculatorPage" element={<EmiCalculatorPage />} />
+            <Route path="/emiCalculator" element={<EmiCalculatorPage />} />
           </Routes>
         </div>
         <Footer />

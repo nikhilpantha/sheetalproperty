@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LinkBanks = () => {
   const banks = [
@@ -78,9 +79,11 @@ const LinkBanks = () => {
               Max Tenure{" "}
               <span className="font-bold text-black">{bank.year} years</span>
             </span>
-            <button className="p-3 rounded text-white font-bold bg-red-700">
-              Apply now
-            </button>
+            <Link to="/payRentOnline">
+              <button className="p-3 rounded text-white font-bold bg-red-700">
+                Apply now
+              </button>
+            </Link>
           </div>
         ))}
       </div>

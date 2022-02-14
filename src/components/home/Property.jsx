@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import PropertyCard from "../card/PropertyCard";
 import { CustomLeftArrow, CustomRightArrow } from "../carousel/CustomeButton";
 import { responsive } from "../carousel/Responsive";
+import { productObject } from "../Object/productObject";
 
 const Property = () => {
   return (
@@ -18,17 +19,9 @@ const Property = () => {
           customLeftArrow={<CustomLeftArrow />}
           className="pb-16 "
         >
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
-          <PropertyCard />
+          {productObject.map((item, index) => (
+            <PropertyCard item={item} key={index} />
+          ))}
         </Carousel>
       </div>
     </div>
