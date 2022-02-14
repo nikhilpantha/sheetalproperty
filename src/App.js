@@ -7,6 +7,9 @@ import Home from "./pages/Home";
 import RequirementForm from "./pages/RequirementForm";
 import SingleProduct from "./pages/SingleProduct";
 import HomeLone from "./pages/HomeLone";
+import PayRentOnline from "./pages/PayRentOnline";
+import LegelHepl from "./pages/LegelHepl";
+import EmiCalculatorPage from "./pages/EmiCalculatorPage";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
             <Route path="/requirementForm" element={<RequirementForm />} />
             <Route path="/singleProduct" element={<SingleProduct />} />
             <Route path="/homeLone" element={<HomeLone />} />
+            <Route path="/payRentOnline" element={<PayRentOnline />} />
+            <Route path="/legalHelp" element={<LegelHepl />} />
+            <Route path="/emiCalculatorPage" element={<EmiCalculatorPage />} />
           </Routes>
         </div>
         <Footer />

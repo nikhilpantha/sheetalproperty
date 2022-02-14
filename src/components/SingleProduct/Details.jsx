@@ -1,5 +1,6 @@
 import React from "react";
 import { BsHeart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Details = () => {
   const product = {
@@ -76,9 +77,11 @@ const Details = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row space-y-5 sm:space-x-5  sm:space-y-0 sm:items-center">
-          <button className="px-5 py-3 text-white font-bold bg-red-700 rounded-lg">
-            Contact Owner
-          </button>
+          <Link to="/payRentOnline">
+            <button className="px-5 py-3 text-white font-bold bg-red-700 rounded-lg">
+              Contact Owner
+            </button>
+          </Link>
           <button className="px-5 py-3 text-red-700 border border-red-700 rounded-lg">
             Get contact number
           </button>

@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 const Register = () => {
   const [passwordShown, setPasswordShown] = useState(false);
+  const [conformPasswordShown, setConformPasswordShown] = useState(false);
 
   return (
     <div className="p-3 text-sm">
@@ -33,20 +34,13 @@ const Register = () => {
               className="w-full focus:outline-none"
               placeholder="Password"
             />
-          </label>
-          <label className="flex space-x-3  p-3 items-center">
-            <FaLock className="w-5 h-5 text-gray-400" />
-            <input
-              type={passwordShown ? "text" : "password"}
-              className="w-full focus:outline-none"
-              placeholder="Conform Password"
-            />
             {passwordShown ? (
               <>
                 <button
                   onClick={(e) => {
                     e.preventDefault();
-                    setPasswordShown(true);
+                    setPasswordShown(false);
+                    console.log(passwordShown);
                   }}
                 >
                   <AiOutlineEyeInvisible className="w-6 h-6 text-gray-500" />
@@ -56,7 +50,41 @@ const Register = () => {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  setPasswordShown(false);
+
+                  setPasswordShown(true);
+                  console.log(passwordShown);
+                }}
+              >
+                <AiOutlineEye className="w-6 h-6 text-gray-500" />
+              </button>
+            )}
+          </label>
+          <label className="flex space-x-3  p-3 items-center">
+            <FaLock className="w-5 h-5 text-gray-400" />
+            <input
+              type={conformPasswordShown ? "text" : "password"}
+              className="w-full focus:outline-none"
+              placeholder="Conform Password"
+            />
+            {conformPasswordShown ? (
+              <>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setConformPasswordShown(false);
+                    console.log(passwordShown);
+                  }}
+                >
+                  <AiOutlineEyeInvisible className="w-6 h-6 text-gray-500" />
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  setConformPasswordShown(true);
+                  console.log(passwordShown);
                 }}
               >
                 <AiOutlineEye className="w-6 h-6 text-gray-500" />

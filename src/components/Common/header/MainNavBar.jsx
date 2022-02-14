@@ -42,8 +42,8 @@ const MainNavBar = () => {
 
   return (
     <div className="bg-red-700 px-5 lg:px-10 h-16 py-2 flex space-x-2 items-center justify-between">
-      {navigation.map((item) => (
-        <Menu as="div" className="text-left">
+      {navigation.map((item, index) => (
+        <Menu key={index} as="div" className="text-left">
           <div className="flex">
             <Menu.Button className="inline-flex items-center justify-start text-lg w-full text-white py-2 hover:border-b-2 hover:border-white">
               {item.subTitle.length > 0 ? (

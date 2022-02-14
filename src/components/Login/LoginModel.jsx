@@ -66,7 +66,7 @@ const LoginModel = ({ r, setR }) => {
                       {category}
                     </Tab>
                   ))}
-                  <div className="hidden sm:block pr-4 pt-4">
+                  <div className="pr-4 pt-4">
                     <button
                       type="button"
                       className=" rounded-md text-white focus:outline-none"

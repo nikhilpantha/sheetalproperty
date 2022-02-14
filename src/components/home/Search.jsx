@@ -13,7 +13,7 @@ const Search = () => {
             <li>New Homes</li>
             <li>Invest</li>
           </ul>
-          <div className="border-2 md:text-xl border-gray-600 flex items-center rounded-md hover:border-gray-900 focus:ring-2 focus:ring-red-700 overflow-hidden space-x-2 xs:space-x-5">
+          <div className="border-2 md:text-xl border-gray-600 flex items-center rounded-md bg-white hover:border-gray-900 focus:ring-2 focus:ring-red-700 overflow-hidden space-x-2 xs:space-x-5">
             <input
               type={"text"}
               placeholder="Enter an address, neighbourhood, city or ZIP code"

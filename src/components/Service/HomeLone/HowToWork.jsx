@@ -29,8 +29,11 @@ const HowToWork = () => {
         <p className="bg-red-700 h-1 w-16"></p>
       </div>
       <div className="py-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {work.map((item) => (
-          <div className="border-2 border-gray-200 rounded-lg p-5 shadow-sm space-y-5">
+        {work.map((item, index) => (
+          <div
+            key={index}
+            className="border-2 border-gray-200 rounded-lg p-5 shadow-sm space-y-5"
+          >
             <img
               src={`Services/${item.image}`}
               alt={`Services/${item.image}`}

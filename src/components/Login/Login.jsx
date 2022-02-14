@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { FaLock, FaUserAlt } from "react-icons/fa";
 
 const Login = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
+
   return (
     <div className="p-3 text-sm">
       <form className="w-full space-y-5">
@@ -18,10 +21,34 @@ const Login = () => {
           <label className="flex space-x-3  p-3 items-center">
             <FaLock className="w-5 h-5 text-gray-400" />
             <input
-              type="Password"
+              type={passwordShown ? "text" : "password"}
               className="w-full focus:outline-none"
               placeholder="Password"
             />
+            {passwordShown ? (
+              <>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setPasswordShown(false);
+                    console.log(passwordShown);
+                  }}
+                >
+                  <AiOutlineEyeInvisible className="w-6 h-6 text-gray-500" />
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  setPasswordShown(true);
+                  console.log(passwordShown);
+                }}
+              >
+                <AiOutlineEye className="w-6 h-6 text-gray-500" />
+              </button>
+            )}
           </label>
         </div>
         <div className="flex justify-between">
