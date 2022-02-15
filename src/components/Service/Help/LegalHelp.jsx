@@ -6,7 +6,7 @@ const LegalHelp = () => {
     <div className="grid sm:grid-cols-5 gap-5 items-center lg:gap-10 p-5 md:p-10">
       <div className="w-full sm:col-span-2">
         <img
-          src="happy-young-asian-couple-realtor-agent1.png"
+          src="/happy-young-asian-couple-realtor-agent1.png"
           alt="happy-young-asian-couple-realtor-agent1.png"
           className="w-full bg-cover rounded"
         />

@@ -8,8 +8,11 @@ import RequirementForm from "./pages/RequirementForm";
 import SingleProduct from "./pages/SingleProduct";
 import HomeLone from "./pages/HomeLone";
 import PayRentOnline from "./pages/PayRentOnline";
-import LegelHepl from "./pages/LegelHepl";
+import LegalHelp from "./pages/LegalHelp";
 import EmiCalculatorPage from "./pages/EmiCalculatorPage";
+import RateAndTrends from "./pages/RateAndTrends";
+import Investment from "./pages/Investment";
+import InvestmentExplore from "./pages/InvestmentExplore";
 
 function App() {
   return (
@@ -23,8 +26,11 @@ function App() {
             <Route path="/singleProduct" element={<SingleProduct />} />
             <Route path="/homeLone" element={<HomeLone />} />
             <Route path="/payRentOnline" element={<PayRentOnline />} />
-            <Route path="/legalHelp" element={<LegelHepl />} />
+            <Route path="/LegalHelp" element={<LegalHelp />} />
             <Route path="/emiCalculator" element={<EmiCalculatorPage />} />
+            <Route path="/rateandtrend" element={<RateAndTrends />} />
+            <Route path="/investment" element={<Investment />} />
+            <Route path="/investment/export" element={<InvestmentExplore />} />
           </Routes>
         </div>
         <Footer />

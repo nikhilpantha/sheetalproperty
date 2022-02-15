@@ -5,7 +5,7 @@ const TopPojectCard = () => {
     <div className="w-full bg-white rounded-md shadow-lg border-2 border-gray-200 overflow-hidden">
       <div className=" ">
         <img
-          src="unsplash.png"
+          src="/unsplash.png"
           alt="unsplash"
           className="w-full bg-center h-56"
         />

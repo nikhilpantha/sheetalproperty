@@ -1,16 +1,16 @@
 import React from "react";
 import Contact from "../components/Common/Contact";
 import AskOnline from "../components/Service/Help/AskOnline";
-import LegalHelp from "../components/Service/Help/LegalHelp";
+import LegalHelpp from "../components/Service/Help/LegalHelp";
 
-const LegelHepl = () => {
+const LegalHelp = () => {
   return (
     <div>
-      <LegalHelp />
+      <LegalHelpp />
       <AskOnline />
       <Contact />
     </div>
   );
 };
 
-export default LegelHepl;
+export default LegalHelp;

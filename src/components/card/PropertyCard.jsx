@@ -8,7 +8,7 @@ const FearuredCard = ({ item }) => {
     >
       <div className="rounded-md overflow-hidden">
         <img
-          src={`property/${item.image}`}
+          src={`/property/${item.image}`}
           alt={`property/${item.image}`}
           className="w-full bg-center h-44 sm:h-48"
         />

@@ -15,7 +15,7 @@ export const advanceTools = [
     image: "savings.png",
     title: "Investment",
     description: "Get end to end legal Assistance on your Property Documents.",
-    href: "/",
+    href: "/investment",
   },
   {
     image: "calculator.png",

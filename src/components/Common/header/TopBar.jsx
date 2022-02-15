@@ -10,7 +10,7 @@ const TopBar = () => {
       <div className="px-5 lg:px-10 py-3 shadow flex justify-between items-center">
         <a href="/">
           <img
-            src="shetallogo.png"
+            src="/shetallogo.png"
             alt="shetallogo.png"
             className="w-36 h-auto"
           />

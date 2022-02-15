@@ -11,7 +11,7 @@ const FearuredCard = () => {
         </div>
         <div className="rounded-md overflow-hidden">
           <img
-            src="unsplash.png"
+            src="/unsplash.png"
             alt="unsplash"
             className="w-full bg-center h-44 sm:h-48"
           />

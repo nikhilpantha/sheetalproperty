@@ -5,7 +5,7 @@ import { HiMail } from "react-icons/hi";
 const Contact = () => {
   return (
     <div className="p-5 py-10 lg:p-10 grid lg:grid-cols-2 items-center gap-5">
-      <img src="contact.png" alt="" className="w-full h-auto rounded" />
+      <img src="/contact.png" alt="" className="w-full h-auto rounded" />
 
       <div className="space-y-7">
         <h1 className="text-3xl font-bold">Contact Us</h1>

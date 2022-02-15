@@ -122,7 +122,7 @@ const Sidebar = () => {
                   <div className="flex-shrink-0 flex items-center px-4">
                     <img
                       className="h-14 w-auto"
-                      src="shetallogo.png"
+                      src="/shetallogo.png"
                       alt="Workflow"
                     />
                   </div>
@@ -227,7 +227,7 @@ const Sidebar = () => {
 
         <div className="px-5 flex justify-between items-center py-2 shadow-xl border-b border-gray-100">
           <a href="/">
-            <img src="shetallogo.png" alt="" className="w-28 h-auto" />
+            <img src="/shetallogo.png" alt="" className="w-28 h-auto" />
           </a>
           <div className="z-10 lg:hidden sm:pl-3 sm:pt-3 bg-white">
             <button
