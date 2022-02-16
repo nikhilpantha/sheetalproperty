@@ -8,12 +8,71 @@ const MainNavBar = () => {
     {
       link: "/",
       title: "Find Property",
-      subTitle: ["Buy", "Rent", "House and land", "new house", "rural"],
+      subTitle: [
+        {
+          title: "Buy ",
+          link: "/",
+        },
+        {
+          title: " Rent",
+          link: "/",
+        },
+        {
+          title: "House and land",
+          link: "/",
+        },
+        {
+          title: "new house",
+          link: "/",
+        },
+        {
+          title: "trural",
+          link: "/",
+        },
+      ],
     },
     {
       link: "/",
       title: "Property Service",
-      subTitle: ["Buy", "Rent", "House and land", "new house", "rural"],
+      subTitle: [
+        {
+          title: "Rent Service",
+          link: "#",
+        },
+        {
+          title: "Pay Rent",
+          link: "/",
+        },
+        {
+          title: "Rent Agreement",
+          link: "/",
+        },
+        {
+          title: "Generate Rent Receipt",
+          link: "/",
+        },
+        {
+          title: "tenant verification",
+          link: "/",
+        },
+
+        {
+          title: "Buy/sell services",
+          link: "#",
+        },
+        {
+          title: "property lawyers",
+          link: "/",
+        },
+        {
+          title: "Home inspection",
+          link: "/",
+        },
+        {
+          title: "design and Decor",
+          link: "/",
+        },
+      ],
     },
     {
       link: "/",
@@ -33,7 +92,16 @@ const MainNavBar = () => {
     {
       link: "/",
       title: "For Owners",
-      subTitle: ["Buy", "Rent", "House and land", "new house", "rural"],
+      subTitle: [
+        {
+          title: "My property ",
+          link: "/",
+        },
+        {
+          title: " sell",
+          link: "/",
+        },
+      ],
     },
   ];
   function classNames(...classes) {
@@ -66,24 +134,32 @@ const MainNavBar = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <div className="py-1">
+              <Menu.Items className="absolute w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
+                <div className="">
                   <Menu.Item>
                     {({ active }) => (
                       <>
                         {item.subTitle.map((sub, index) => (
-                          <a
-                            href="/"
-                            key={index}
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900 "
-                                : "text-gray-700",
-                              "block px-4 py-2 text-sm"
+                          <>
+                            {sub.link === "#" ? (
+                              <span className="block px-4 py-2 text-sm capitalize font-medium border-y">
+                                {sub.title}
+                              </span>
+                            ) : (
+                              <a
+                                href={sub.link}
+                                key={index}
+                                className={classNames(
+                                  active
+                                    ? "bg-gray-100 text-gray-900 "
+                                    : "text-gray-700",
+                                  "block px-4 py-2 text-sm capitalize"
+                                )}
+                              >
+                                {sub.title}
+                              </a>
                             )}
-                          >
-                            {sub}
-                          </a>
+                          </>
                         ))}
                       </>
                     )}

@@ -13,6 +13,7 @@ import EmiCalculatorPage from "./pages/EmiCalculatorPage";
 import RateAndTrends from "./pages/RateAndTrends";
 import Investment from "./pages/Investment";
 import InvestmentExplore from "./pages/InvestmentExplore";
+import InvestmentAllProduct from "./pages/InvestmentAllProduct";
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
             <Route path="/rateandtrend" element={<RateAndTrends />} />
             <Route path="/investment" element={<Investment />} />
             <Route path="/investment/export" element={<InvestmentExplore />} />
+            <Route
+              path="/investment/viewallproduct"
+              element={<InvestmentAllProduct />}
+            />
           </Routes>
         </div>
         <Footer />
