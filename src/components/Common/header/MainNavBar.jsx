@@ -36,19 +36,23 @@ const MainNavBar = () => {
       title: "Property Service",
       subTitle: [
         {
-          title: "home Lone",
-          link: "/homeLone",
+          title: "Buy",
+          link: "/",
         },
         {
-          title: "Pay Rent Online",
-          link: "/payRentOnline",
+          title: " Sale ",
+          link: "/",
         },
         {
-          title: "Legal Services",
+          title: "Rent",
           link: "/legalHelp",
         },
         {
-          title: "Design and Decor",
+          title: "Invest",
+          link: "/",
+        },
+        {
+          title: "Projects",
           link: "/",
         },
       ],
@@ -142,7 +146,7 @@ const MainNavBar = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
+              <Menu.Items className="absolute w-40  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
                 <div className="">
                   <Menu.Item>
                     {({ active }) => (
