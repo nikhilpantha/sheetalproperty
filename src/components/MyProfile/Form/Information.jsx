@@ -13,7 +13,7 @@ const Information = () => {
             type="text"
             placeholder="ramparajuli"
             disabled
-            className="border-gray-300 bg-gray-200 rounded"
+            className="border-gray-500 bg-gray-200 rounded border p-3"
           />
         </label>
         <label className="flex flex-col space-y-3">
@@ -21,21 +21,21 @@ const Information = () => {
           <input
             type="email"
             value={"ramparajuli@gmai.com"}
-            className="border-gray-300 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700"
+            className="border p-3 border-gray-500 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700"
           />
         </label>
         <label className="flex flex-col space-y-3">
           <span>First Name</span>
           <input
             type="text"
-            className="border-gray-300 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700"
+            className=" border p-3 border-gray-500 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700"
           />
         </label>
         <label className="flex flex-col space-y-3">
           <span>Last Name</span>
           <input
             type="text"
-            className="border-gray-300 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700"
+            className="border p-3 border-gray-500 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700"
           />
         </label>
       </form>
