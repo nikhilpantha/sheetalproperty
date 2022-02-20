@@ -1,34 +1,7 @@
 import React from "react";
+import { product } from "../Object/product";
 
 const Description = () => {
-  const product = {
-    title: "4 BHK House",
-    address: "Golfutar, Kathmandu",
-    discription:
-      "Close to Ringroad, Central location, Surrounded by friendly neighbourhood",
-    facilitie: "Water Storage, Private Terrace, Parking, Garden",
-    bedroom: "4",
-    bathroom: "4",
-    balcony: "2",
-    price: "Rs. 10 Cr.",
-    superArea: "2025 sq.ft",
-    carpetArea: "2000 sq.ft",
-    status: "Ready to move",
-    floor: "2 floors",
-    parking: "Available",
-    landmarks: "Golfutar Basketball Court",
-    overlooking: "Garden/Park, Main Road",
-    facing: "Marble",
-    flooring: "Marble",
-    waterAvailability: "24/7 Available",
-    electricity: "No/Rare Power cut",
-    lift: "No",
-    construction: "5-10 years",
-    furnishing: "Furnished",
-    ownership: "Freeholder",
-    report: "Sold Outs",
-    unitsAvailable: "1",
-  };
   return (
     <div className="">
       <div className="border-y-2 border-gray-200 px-5 lg:px-10 py-3 font-bold text-2xl">

@@ -17,7 +17,7 @@ const Search = () => {
             <input
               type={"text"}
               placeholder="Enter an address, neighbourhood, city or ZIP code"
-              className="w-full h-full p-3 xs:p-5 md:p-7 outline-none"
+              className="w-full h-full p-3 xs:p-5 md:p-7 border-none outline-none"
             />
             <button className="p-1 xs:px-3 xs:py-2 space-x-1 flex items-center text-gray-700 border rounded-md border-gray-700">
               <AiOutlineControl className="hidden xs:inline w-6 h-6" />

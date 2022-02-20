@@ -72,7 +72,6 @@ const Register = () => {
                   onClick={(e) => {
                     e.preventDefault();
                     setConformPasswordShown(false);
-                    console.log(passwordShown);
                   }}
                 >
                   <AiOutlineEyeInvisible className="w-6 h-6 text-gray-500" />
@@ -82,9 +81,7 @@ const Register = () => {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-
                   setConformPasswordShown(true);
-                  console.log(passwordShown);
                 }}
               >
                 <AiOutlineEye className="w-6 h-6 text-gray-500" />

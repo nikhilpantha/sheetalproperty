@@ -37,7 +37,7 @@ const ExtraValue = () => {
       </ul>
       <div className="hidden xl:block w-full h-full md:col-span-2">
         <img
-          src="image1.png"
+          src="/image1.png"
           alt="image1.png"
           className="h-full rounded-lg  w-full"
         />

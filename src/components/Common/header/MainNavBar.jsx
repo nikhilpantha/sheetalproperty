@@ -36,6 +36,43 @@ const MainNavBar = () => {
       title: "Property Service",
       subTitle: [
         {
+          title: "home Lone",
+          link: "/homeLone",
+        },
+        {
+          title: "Pay Rent Online",
+          link: "/payRentOnline",
+        },
+        {
+          title: "Legal Services",
+          link: "/legalHelp",
+        },
+        {
+          title: "Design and Decor",
+          link: "/",
+        },
+      ],
+    },
+    {
+      link: "/",
+      title: "Property Demand",
+      subTitle: [],
+    },
+    {
+      link: "/requirementForm",
+      title: "Requirement form",
+      subTitle: [],
+    },
+    {
+      link: "/findAgent",
+      title: "Find Agent",
+      subTitle: [],
+    },
+    {
+      link: "/",
+      title: "Our service",
+      subTitle: [
+        {
           title: "Rent Service",
           link: "#",
         },
@@ -70,35 +107,6 @@ const MainNavBar = () => {
         },
         {
           title: "design and Decor",
-          link: "/",
-        },
-      ],
-    },
-    {
-      link: "/",
-      title: "Property Demand",
-      subTitle: [],
-    },
-    {
-      link: "/requirementForm",
-      title: "Requirement form",
-      subTitle: [],
-    },
-    {
-      link: "/findAgent",
-      title: "Find Agent",
-      subTitle: [],
-    },
-    {
-      link: "/",
-      title: "For Owners",
-      subTitle: [
-        {
-          title: "My property ",
-          link: "/",
-        },
-        {
-          title: " sell",
           link: "/",
         },
       ],

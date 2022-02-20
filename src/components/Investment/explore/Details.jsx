@@ -62,9 +62,9 @@ const Details = () => {
               <h1>Looking for property in Budhanilkantha View Tower?</h1>
               <p>Get Advice and Best Deals</p>
               <input
-                type={"text"}
+                type="text"
                 placeholder="Name"
-                className="text-black border-b-2 border-gray-300 p-2 w-full outline-none"
+                className="text-black border-b  p-2 w-full outline-none"
               />
               <div className="flex justify-between space-x-5">
                 <select className="text-gray-500 border-b-2  border-gray-300 outline-none">

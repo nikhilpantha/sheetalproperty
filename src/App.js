@@ -14,6 +14,8 @@ import RateAndTrends from "./pages/RateAndTrends";
 import Investment from "./pages/Investment";
 import InvestmentExplore from "./pages/InvestmentExplore";
 import InvestmentAllProduct from "./pages/InvestmentAllProduct";
+import Project from "./pages/Project";
+import MyProfile from "./pages/MyProfile";
 
 function App() {
   return (
@@ -32,10 +34,12 @@ function App() {
             <Route path="/rateandtrend" element={<RateAndTrends />} />
             <Route path="/investment" element={<Investment />} />
             <Route path="/investment/export" element={<InvestmentExplore />} />
+            <Route path="/project" element={<Project />} />
             <Route
               path="/investment/viewallproduct"
               element={<InvestmentAllProduct />}
             />
+            <Route path="/myProfile" element={<MyProfile />} />
           </Routes>
         </div>
         <Footer />
