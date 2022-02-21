@@ -81,26 +81,23 @@ const MainNavBar = () => {
           link: "#",
         },
         {
-          title: "Pay Rent",
-          link: "/",
+          title: "Home Lone",
+          link: "/homeLone",
         },
         {
-          title: "Rent Agreement",
-          link: "/",
+          title: "Pay Rent Online",
+          link: "/payRentOnline",
         },
         {
-          title: "Generate Rent Receipt",
-          link: "/",
-        },
-        {
-          title: "tenant verification",
-          link: "/",
+          title: "legal Help",
+          link: "/legalHelp",
         },
 
         {
           title: "Buy/sell services",
           link: "#",
         },
+
         {
           title: "property lawyers",
           link: "/",

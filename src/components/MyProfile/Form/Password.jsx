@@ -7,7 +7,7 @@ const Password = () => {
   const [conformPasswordShown, setConformPasswordShown] = useState(false);
   const [oldPassword, setOldPasswordShown] = useState(false);
   return (
-    <div className="space-y-5 md:space-y-10">
+    <div className="space-y-5">
       <div className="max-w-7xl mx-auto ">
         <h1 className="text-2xl font-semibold text-gray-900">
           Change Password
@@ -16,7 +16,7 @@ const Password = () => {
       <form className="grid gap-10 md:w-1/2">
         <label className="flex flex-col space-y-3">
           <span>Old Password</span>
-          <div className="p-3 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
+          <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
             <input
               type={oldPassword ? "text" : "password"}
               className="w-full border-none"
@@ -46,7 +46,7 @@ const Password = () => {
         </label>
         <label className="flex flex-col space-y-3">
           <span>New Password</span>
-          <div className="p-3 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
+          <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
             <input
               type={passwordShown ? "text" : "password"}
               className="w-full border-none"
@@ -76,7 +76,7 @@ const Password = () => {
         </label>
         <label className="flex flex-col space-y-3">
           <span>Confirm New Password</span>
-          <div className="p-3 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
+          <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
             <input
               type={conformPasswordShown ? "text" : "password"}
               className="w-full border-none"

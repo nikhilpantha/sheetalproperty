@@ -6,7 +6,7 @@ export const TopProjects = () => {
   return (
     <>
       <div className="md:pt-16 px-5 md:px-10">
-        <h1 className="pb-3 text-3xl font-light">Top Product</h1>
+        <h1 className="pb-3 text-3xl font-light">Top Project</h1>
         <p className="bg-red-700 h-0.5 w-16"></p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 lg:px-10 md:py-5 gap-5 xl:gap-10">

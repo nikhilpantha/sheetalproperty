@@ -28,7 +28,7 @@ const About = () => {
         </li>
         <li className="flex flex-col">
           <span className="text-sm text-gray-700">Project Area</span>
-          <span className="text-black">{product.area}</span>
+          <span className="text-black">{product.superArea}</span>
         </li>
         <li className="flex flex-col">
           <span className="text-sm text-gray-700">Occupancy Certificate</span>

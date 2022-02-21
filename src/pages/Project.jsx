@@ -11,7 +11,7 @@ const Project = () => {
       <div className="px-5 lg:px-10">
         <div className="py-10 border-b-2 border-gray-300">
           <img
-            src="/investment/unsplash3.png"
+            src="/fetured/unsplash_b_79nOqf95I.png"
             alt="/investment/unsplash2"
             className="w-full h-96 bg-cover bg-center rounded"
           />
