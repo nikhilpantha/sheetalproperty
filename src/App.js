@@ -16,6 +16,7 @@ import InvestmentExplore from "./pages/InvestmentExplore";
 import InvestmentAllProduct from "./pages/InvestmentAllProduct";
 import Project from "./pages/Project";
 import MyProfile from "./pages/MyProfile";
+import PostProperty from "./pages/PostProperty";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/rateandtrend" element={<RateAndTrends />} />
             <Route path="/investment" element={<Investment />} />
             <Route path="/investment/export" element={<InvestmentExplore />} />
+            <Route path="/postProperty" element={<PostProperty />} />
             <Route path="/project" element={<Project />} />
             <Route
               path="/investment/viewallproduct"
