@@ -7,6 +7,7 @@ import Featured from "../components/home/Featured";
 import Property from "../components/home/Property";
 
 const SingleProduct = () => {
+  window.scrollTo(0, 0);
   return (
     <div className="pb-10">
       <UserHead />

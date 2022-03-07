@@ -2,7 +2,7 @@ import React from "react";
 import AdviceTools from "../components/home/AdviceTools";
 import Featured from "../components/home/Featured";
 import Property from "../components/home/Property";
-import Search from "../components/home/Search";
+import Search from "../components/Common/SearchBox/HomeSearch";
 import { TopProjects } from "../components/home/TopProjects";
 
 const Home = () => {

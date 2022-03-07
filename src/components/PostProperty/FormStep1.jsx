@@ -4,9 +4,9 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
 import { MdOutlineDriveFolderUpload } from "react-icons/md";
 
-const FormStep1 = () => {
+const FormStep1 = ({ setFormStep }) => {
   return (
-    <div className="grid md:grid-cols-4 gap-10 md:gap-0 sm:py-10">
+    <div className="grid md:grid-cols-4 gap-10 md:gap-0 sm:pb-10">
       <div className="flex flex-col items-center flex-shrink-0 lg:px-4 border-r-2 ">
         <div className={`relative m-4`}>
           <img className="w-full h-auto" src="noUser.png" alt="Workflow" />
@@ -137,7 +137,13 @@ const FormStep1 = () => {
           </button>
         </form>
         <div className="flex justify-end">
-          <button className="text-white bg-red-700 font-semibold flex space-x-3 p-2 px-5 rounded items-center w-full md:w-auto justify-center">
+          <button
+            onClick={() => {
+              setFormStep(1);
+              window.scrollTo(0, 0);
+            }}
+            className="text-white bg-red-700 font-semibold flex space-x-3 p-2 px-5 rounded items-center w-full md:w-auto justify-center"
+          >
             <span>Next</span>
             <AiOutlineArrowRight className="w-5 h-5" />
           </button>
