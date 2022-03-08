@@ -5,6 +5,7 @@ import Description from "../components/SingleProduct/Description";
 import ExtraValue from "../components/SingleProduct/ExtraValue";
 import Featured from "../components/home/Featured";
 import Property from "../components/home/Property";
+import ScheduleTour from "../components/scheduleTour/ScheduleTour";
 
 const SingleProduct = () => {
   window.scrollTo(0, 0);
@@ -15,6 +16,7 @@ const SingleProduct = () => {
       <Details />
       <Description />
       <ExtraValue />
+      <ScheduleTour />
       <Featured />
       <Property />
     </div>

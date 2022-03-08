@@ -58,14 +58,14 @@ const AgentList = () => {
                 <div className="min-w-0 flex-1 flex items-center">
                   <div className="flex-shrink-0">
                     <img
-                      className="h-12 w-12 rounded-full"
+                      className="h-16 w-16 rounded-full"
                       src={application.applicant.imageUrl}
                       alt=""
                     />
                   </div>
-                  <div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-3 md:gap-4">
+                  <div className="min-w-0 flex-1 px-4 md:grid lg:grid-cols-3 items-center md:gap-4">
                     <div>
-                      <p className="text-sm font-medium text-indigo-600 truncate">
+                      <p className="text-sm font-medium text-red-600 truncate">
                         {application.applicant.name}
                       </p>
                       <p className="mt-2 flex items-center text-sm text-gray-500">
@@ -78,7 +78,7 @@ const AgentList = () => {
                         </span>
                       </p>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden lg:block">
                       <div className="mapouter">
                         <div className="gmap_canvas">
                           <iframe
@@ -101,10 +101,12 @@ const AgentList = () => {
                   </div>
                 </div>
                 <div>
-                  <ChevronRightIcon
-                    className="h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                  />
+                  <a href="/singleAgent">
+                    <ChevronRightIcon
+                      className="h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </a>
                 </div>
               </div>
             </a>

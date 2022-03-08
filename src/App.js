@@ -19,6 +19,7 @@ import MyProfile from "./pages/MyProfile";
 import PostProperty from "./pages/PostProperty";
 import PropertyDemand from "./pages/PropertyDemand";
 import FindAgent from "./pages/FindAgent";
+import SingleAgent from "./pages/SingleAgent";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/postProperty" element={<PostProperty />} />
             <Route path="/propertyDemand" element={<PropertyDemand />} />
             <Route path="/findAgent" element={<FindAgent />} />
+            <Route path="/singleAgent" element={<SingleAgent />} />
             <Route path="/project" element={<Project />} />
             <Route
               path="/investment/viewallproduct"
