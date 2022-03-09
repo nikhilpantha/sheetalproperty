@@ -1,19 +1,45 @@
-import React from "react";
-import { AiOutlineControl } from "react-icons/ai";
-import { FaSearch } from "react-icons/fa";
+import React, { useState } from "react";
 import InputBox from "./InputBox";
+
+const searchNav = [
+  {
+    name: "Buy",
+  },
+  {
+    name: "Rent",
+  },
+  {
+    name: "House & Land",
+  },
+  {
+    name: "New Homes",
+  },
+  {
+    name: "Invest",
+  },
+];
 const Search = () => {
+  const [active, setActive] = useState("");
+
   return (
     <>
       <div className="flex justify-center px-5 md:px-10">
-        <div className="w-full xl:w-9/12 -mt-20 md:-mt-36 bg-white rounded shadow-xl border border-gray-100 p-3 xs:p-7  md:p-10 lg:space-y-5">
-          <ul className="hidden lg:flex w-4/5  text-lg items-center justify-between font-bold px-5">
-            <li>Buy</li>
-            <li>Rent</li>
-            <li>House & Land</li>
-            <li>New Homes</li>
-            <li>Invest</li>
-          </ul>
+        <div className="w-full xl:w-9/12 -mt-40 md:-mt-32 md:bg-white rounded md:shadow-xl md:border border-gray-100 md:p-5 lg:p-10">
+          <div className="flex xl:w-4/5  text-lg items-center justify-start font-bold overflow-x-scroll">
+            {searchNav.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => setActive(item.name)}
+                className={`${
+                  active === item.name
+                    ? "bg-red-700 text-white"
+                    : "text-white md:text-black"
+                }   font-medium p-2 px-4 sm:px-6 min-w-max`}
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
           <InputBox />
         </div>
       </div>

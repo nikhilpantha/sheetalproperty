@@ -9,7 +9,7 @@ const Property = () => {
   return (
     <div className="px-5 lg:px-10 pt-16">
       <div className="">
-        <h1 className="pb-3 text-3xl font-light">Property Services</h1>
+        <h1 className="pb-3 text-3xl font-light">Other Services</h1>
         <p className="bg-red-700 h-1 w-16"></p>
       </div>
       <div className="py-10 md:py-16">

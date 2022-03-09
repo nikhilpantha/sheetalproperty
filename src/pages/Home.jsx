@@ -14,7 +14,7 @@ const Home = () => {
           backgroundImage: `url("349872.jpeg")`,
         }}
       >
-        <h1 className="md:text-5xl text-3xl font-semibold capitalize text-white">
+        <h1 className="-mt-10 md:text-5xl text-3xl font-semibold capitalize text-white">
           Search Nepal’s home of property
         </h1>
       </div>

@@ -10,8 +10,8 @@ const InputBox = () => {
         placeholder="Enter an address, neighbourhood, city or ZIP code"
         className="w-full h-full p-3 xs:p-5 border-none outline-none"
       />
-      <button className="p-1 xs:px-3 xs:py-2 space-x-1 flex items-center text-gray-700 border rounded-md border-gray-700">
-        <AiOutlineControl className="hidden xs:inline w-6 h-6" />
+      <button className="p-1 sm:px-3 sm:py-2 space-x-1 flex items-center text-red-700 font-bold sm:font-base sm:text-gray-700 sm:border rounded-md border-gray-700">
+        <AiOutlineControl className="hidden sm:inline w-6 h-6" />
         <span>Filters</span>
       </button>
       <div className="p-3 xs:p-5 h-full space-x-3 font-medium text-xl flex items-center bg-red-700 text-white">

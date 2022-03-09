@@ -1,62 +1,115 @@
 import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  InboxIcon,
-  MenuIcon,
-  UsersIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import LoginModel from "../../Login/LoginModel";
 
 const Sidebar = () => {
   const [r, setR] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   const navigation = [
     {
-      name: "Find Property",
-      icon: UsersIcon,
-      current: false,
-      children: [
-        { name: "Buy", href: "#" },
-        { name: "Rent", href: "#" },
-        { name: "House and land", href: "#" },
-        { name: "new house", href: "#" },
-        { name: "rural", href: "#" },
+      link: "/",
+      title: "Find Property",
+      subTitle: [
+        {
+          title: "Buy ",
+          link: "/",
+        },
+        {
+          title: " Rent",
+          link: "/",
+        },
+        {
+          title: "House and land",
+          link: "/",
+        },
+        {
+          title: "new house",
+          link: "/",
+        },
+        {
+          title: "trural",
+          link: "/",
+        },
       ],
     },
     {
-      name: "Property Demand",
-      icon: FolderIcon,
-      current: false,
-      children: [
-        { name: "Overview", href: "#" },
-        { name: "Members", href: "#" },
-        { name: "Calendar", href: "#" },
-        { name: "Settings", href: "#" },
+      link: "/",
+      title: "Property Service",
+      subTitle: [
+        {
+          title: "Buy",
+          link: "/productSearch",
+        },
+        {
+          title: " Sale ",
+        },
+        {
+          title: "Rent",
+
+          link: "/productSearch",
+        },
+        {
+          title: "Invest",
+          link: "/productSearch",
+        },
+        {
+          title: "Projects",
+          link: "/productSearch/",
+        },
       ],
     },
     {
-      name: "Requirement form",
-      icon: CalendarIcon,
-      current: false,
+      link: "/",
+      title: "Property Demand",
     },
     {
-      name: "Find Agen",
-      icon: InboxIcon,
-      current: false,
+      link: "/requirementForm",
+      title: "Requirement form",
     },
     {
-      name: "For Owners",
-      icon: ChartBarIcon,
-      current: false,
-      children: [
-        { name: "My Property", href: "#" },
-        { name: "sell", href: "#" },
+      link: "/findAgent",
+      title: "Find Agent",
+    },
+    {
+      link: "/",
+      title: "Other service",
+      subTitle: [
+        {
+          title: "Rent Service",
+          link: "#",
+        },
+        {
+          title: "Home Lone",
+          link: "/homeLone",
+        },
+        {
+          title: "Pay Rent Online",
+          link: "/payRentOnline",
+        },
+        {
+          title: "legal Help",
+          link: "/legalHelp",
+        },
+
+        // {
+        //   title: "Buy/sell services",
+        //   link: "#",
+        // },
+
+        // {
+        //   title: "property lawyers",
+        //   link: "/",
+        // },
+        // {
+        //   title: "Home inspection",
+        //   link: "/",
+        // },
+        // {
+        //   title: "design and Decor",
+        //   link: "/",
+        // },
       ],
     },
   ];
@@ -132,10 +185,10 @@ const Sidebar = () => {
                       aria-label="Sidebar"
                     >
                       {navigation.map((item) =>
-                        !item.children ? (
-                          <div key={item.name}>
+                        !item.subTitle ? (
+                          <div key={item.title}>
                             <a
-                              href="/"
+                              href={item.link}
                               className={classNames(
                                 item.current
                                   ? "bg-gray-100 text-gray-900"
@@ -143,13 +196,13 @@ const Sidebar = () => {
                                 "group w-full flex items-center pl-2 py-2 text-sm font-medium rounded-md"
                               )}
                             >
-                              {item.name}
+                              {item.title}
                             </a>
                           </div>
                         ) : (
                           <Disclosure
                             as="div"
-                            key={item.name}
+                            key={item.title}
                             className="space-y-1"
                           >
                             {({ open }) => (
@@ -162,7 +215,7 @@ const Sidebar = () => {
                                     "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none "
                                   )}
                                 >
-                                  <span className="flex-1">{item.name}</span>
+                                  <span className="flex-1">{item.title}</span>
                                   <svg
                                     className={classNames(
                                       open
@@ -180,14 +233,14 @@ const Sidebar = () => {
                                   </svg>
                                 </Disclosure.Button>
                                 <Disclosure.Panel className="space-y-1">
-                                  {item.children.map((subItem) => (
+                                  {item.subTitle.map((subItem) => (
                                     <Disclosure.Button
-                                      key={subItem.name}
+                                      key={subItem.title}
                                       as="a"
-                                      href={subItem.href}
+                                      href={subItem.link}
                                       className="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50"
                                     >
-                                      {subItem.name}
+                                      {subItem.title}
                                     </Disclosure.Button>
                                   ))}
                                 </Disclosure.Panel>

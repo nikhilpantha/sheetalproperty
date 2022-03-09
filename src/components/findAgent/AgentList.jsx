@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  CheckCircleIcon,
-  ChevronRightIcon,
-  MailIcon,
-} from "@heroicons/react/solid";
+import { ChevronRightIcon, MailIcon } from "@heroicons/react/solid";
 
 const applications = [
   {

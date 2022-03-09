@@ -37,23 +37,23 @@ const MainNavBar = () => {
       subTitle: [
         {
           title: "Buy",
-          link: "/",
+          link: "/productSearch",
         },
         {
           title: " Sale ",
-          link: "/",
         },
         {
           title: "Rent",
-          link: "/legalHelp",
+
+          link: "/productSearch",
         },
         {
           title: "Invest",
-          link: "/",
+          link: "/productSearch",
         },
         {
           title: "Projects",
-          link: "/",
+          link: "/productSearch/",
         },
       ],
     },
@@ -74,7 +74,7 @@ const MainNavBar = () => {
     },
     {
       link: "/",
-      title: "Our service",
+      title: "Other service",
       subTitle: [
         {
           title: "Rent Service",
@@ -93,23 +93,23 @@ const MainNavBar = () => {
           link: "/legalHelp",
         },
 
-        {
-          title: "Buy/sell services",
-          link: "#",
-        },
+        // {
+        //   title: "Buy/sell services",
+        //   link: "#",
+        // },
 
-        {
-          title: "property lawyers",
-          link: "/",
-        },
-        {
-          title: "Home inspection",
-          link: "/",
-        },
-        {
-          title: "design and Decor",
-          link: "/",
-        },
+        // {
+        //   title: "property lawyers",
+        //   link: "/",
+        // },
+        // {
+        //   title: "Home inspection",
+        //   link: "/",
+        // },
+        // {
+        //   title: "design and Decor",
+        //   link: "/",
+        // },
       ],
     },
   ];
