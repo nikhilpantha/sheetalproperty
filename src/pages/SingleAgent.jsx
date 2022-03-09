@@ -13,6 +13,7 @@ const SingleAgent = () => {
       <div>
         <ContactForm />
       </div>
+      
     </div>
   );
 };

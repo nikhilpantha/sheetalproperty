@@ -3,10 +3,10 @@ import MortageCalculator from "./MortageCalculator";
 
 const ScheduleTour = () => {
   return (
-    <div className="px-5 py-16 lg:px-10 space-y-8">
-      <div className="text-2xl font-bold">ScheduleTour</div>
+    <div className="sm:px-5 py-16 lg:px-10 space-y-8">
+      <div className="px-5 sm:px-0 text-2xl font-bold">ScheduleTour</div>
       <div className="grid lg:grid-cols-3 gap-10 xl:gap-16">
-        <div className="lg:col-span-2 border border-gray-300 rounded-lg p-5">
+        <div className="lg:col-span-2 border-b sm:border border-gray-300 sm:rounded-lg p-5">
           <form className="space-y-8">
             <div className="grid md:grid-cols-2 gap-5">
               <label className="flex flex-col">

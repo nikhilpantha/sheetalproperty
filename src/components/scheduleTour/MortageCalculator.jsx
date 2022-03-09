@@ -2,7 +2,7 @@ import React from "react";
 
 const MortageCalculator = () => {
   return (
-    <div className="rounded-lg">
+    <div className="p-5 sm:p-0 rounded-lg">
       <h1 className="text-lg font-semibold pb-5">Mortage Calculator</h1>
       <form className="flex flex-col space-y-5">
         <input

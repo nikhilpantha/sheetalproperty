@@ -19,7 +19,9 @@ import MyProfile from "./pages/MyProfile";
 import PostProperty from "./pages/PostProperty";
 import PropertyDemand from "./pages/PropertyDemand";
 import FindAgent from "./pages/FindAgent";
+import ProductSearch from "./pages/ProductSearch";
 import SingleAgent from "./pages/SingleAgent";
+import InvestDetails from "./pages/InvestDetails";
 
 function App() {
   return (
@@ -42,7 +44,10 @@ function App() {
             <Route path="/propertyDemand" element={<PropertyDemand />} />
             <Route path="/findAgent" element={<FindAgent />} />
             <Route path="/singleAgent" element={<SingleAgent />} />
+            <Route path="/productSearch" element={<ProductSearch />} />
+            <Route path="/investDetail" element={<InvestDetails />} />
             <Route path="/project" element={<Project />} />
+
             <Route
               path="/investment/viewallproduct"
               element={<InvestmentAllProduct />}

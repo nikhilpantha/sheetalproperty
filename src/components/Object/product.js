@@ -1,4 +1,5 @@
 export const product = {
+  image: "unsplash.png",
   title: "4 BHK House",
   address: "Golfutar, Kathmandu",
   by: "Sheetal Property",
@@ -22,7 +23,10 @@ export const product = {
   electricity: "No/Rare Power cut",
   lift: "No",
   TotalUnits: 408,
+  RoadSide: "13 to 30 ft",
+  RoadType: "Gravel",
   TotalTower: 204,
+  PerAana: "37 lakhs",
   PropertyType: "View Tower",
   LaunchDate: "Jan 5, 2022",
   construction: "5-10 years",
@@ -31,4 +35,5 @@ export const product = {
   report: "Sold Outs",
   Pincode: 12335,
   unitsAvailable: "1",
+  PropertyStatus: "Investment",
 };

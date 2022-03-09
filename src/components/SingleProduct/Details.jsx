@@ -82,13 +82,14 @@ const Details = () => {
               <span className="font-semibold text-lg">{product.parking}</span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row space-y-5 sm:space-x-5  sm:space-y-0 sm:items-center">
+          <div className="grid grid-cols-2  sm:flex-row space-y-5 sm:space-x-5  sm:space-y-0 items-center">
             <button
               onClick={() => setOpen(true)}
-              className="px-5 py-3 text-white font-bold bg-red-700 rounded-lg"
+              className="col-span-2 px-5 py-3 text-white font-bold bg-red-700 rounded-lg"
             >
               Contact Owner
             </button>
+
             <Link to="/payRentOnline">
               <button className="px-5 py-3 text-red-700 border border-red-700 rounded-lg">
                 Get contact number

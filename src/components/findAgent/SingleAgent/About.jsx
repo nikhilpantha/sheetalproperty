@@ -42,10 +42,8 @@ const About = () => {
         </div>
       </div>
       <div className="lg:w-3/2 border border-gray-400 rounded p-5">
-        <div className="text-center text-xl py-10">
-          Professional Information
-        </div>
-        <ul className="grid grid-cols-2 gap-10 text-gray-600">
+        <div className="font-bold text-xl py-5">Professional Information</div>
+        <ul className="grid grid-cols-3 gap-10 text-gray-600">
           <div className="grid gap-2">
             <li className="">Broker Address:</li>
             <li className="">Cell Phone:</li>
@@ -57,7 +55,7 @@ const About = () => {
             <li className="">RealEstate Licenses:</li>
             <li className="">Other Licenses:</li>
           </div>
-          <div className="grid gap-2">
+          <div className="grid gap-2 col-span-2">
             {arrayvals.map((value, index) => (
               <li key={index}>{value}</li>
             ))}
