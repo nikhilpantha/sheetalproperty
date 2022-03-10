@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRightIcon, MailIcon } from "@heroicons/react/solid";
+import { ChevronRightIcon } from "@heroicons/react/solid";
 import { FaStar } from "react-icons/fa";
 
 const applications = [
@@ -51,7 +51,7 @@ const applications = [
 const AgentList = () => {
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-md">
-      <ul role="list" className="divide-y divide-gray-200">
+      <ul className="divide-y divide-gray-200">
         {applications.map((application) => (
           <li key={application.applicant.email}>
             <a
@@ -108,6 +108,7 @@ const AgentList = () => {
                       <div className="mapouter">
                         <div className="gmap_canvas">
                           <iframe
+                            title="map"
                             width="250"
                             height="90"
                             id="gmap_canvas"

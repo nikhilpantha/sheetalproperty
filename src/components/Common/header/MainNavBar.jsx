@@ -1,9 +1,9 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { RiArrowDownSLine } from "react-icons/ri";
-import HomeSearch from "../SearchBox/HomeSearch";
 import { navigation } from "./navigation";
 import "animate.css";
+import { useNavigate } from "react-router-dom";
 
 const MainNavBar = () => {
   const [screen, setScreen] = useState(false);
@@ -14,11 +14,11 @@ const MainNavBar = () => {
       else setScreen(false);
     });
   }, []);
-  const [passActive, setPassActive] = useState("");
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
+  let navigate = useNavigate();
 
   return (
     <div
@@ -31,7 +31,7 @@ const MainNavBar = () => {
       {navigation.map((item, index) => (
         <Menu key={index} as="div" className="text-left">
           <div className="flex">
-            <Menu.Button className="inline-flex items-center justify-start text-md w-full text-white py-2 hover:border-b hover:border-white ">
+            <Menu.Button className="inline-flex h-10 items-center justify-start text-md w-full text-white py-2 hover:border-b hover:border-white ">
               {item.subTitle.length > 0 ? (
                 <>
                   {item.title}
@@ -67,8 +67,14 @@ const MainNavBar = () => {
                               <>
                                 {" "}
                                 {item.title === "Find Property" ? (
+                                  // <Link to={`${index}?tab=${sub.title}`}>
                                   <button
-                                    onClick={() => setPassActive(sub.title)}
+                                    onClick={() => {
+                                      navigate({
+                                        pathname: "",
+                                        search: `?tab=${sub.title}`,
+                                      });
+                                    }}
                                     className={classNames(
                                       active
                                         ? "bg-gray-100 text-gray-900 "
@@ -79,6 +85,7 @@ const MainNavBar = () => {
                                     {sub.title}
                                   </button>
                                 ) : (
+                                  // </Link>
                                   <a
                                     href={sub.link}
                                     className={classNames(
@@ -104,9 +111,6 @@ const MainNavBar = () => {
           )}
         </Menu>
       ))}
-      <div className="hidden">
-        <HomeSearch passActive={passActive} />
-      </div>
     </div>
   );
 };

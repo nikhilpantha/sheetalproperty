@@ -17,7 +17,6 @@ export const TopProjects = () => {
       </div>
       <button
         type="button"
-        onClick=""
         className="md:mt-5 right-10 w-full px-5  focus:outline-none flex space-x-2 text-red-700 text-xl capitalize items-center justify-end"
       >
         <span>view all product</span>

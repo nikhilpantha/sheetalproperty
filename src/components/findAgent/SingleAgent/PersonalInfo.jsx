@@ -6,6 +6,7 @@ const PersonalInfo = () => {
     <div className="flex space-x-5 items-center justify-start">
       <div>
         <img
+          alt=""
           src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           className="rounded-full h-auto w-32"
         />

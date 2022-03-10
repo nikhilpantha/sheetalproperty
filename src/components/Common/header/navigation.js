@@ -5,23 +5,18 @@ export const navigation = [
     subTitle: [
       {
         title: "Buy",
-        link: "/",
       },
       {
-        title: " Rent",
-        link: "/",
+        title: "Rent",
       },
       {
         title: "House and land",
-        link: "/",
       },
       {
         title: "new house",
-        link: "/",
       },
       {
-        title: "trural",
-        link: "/",
+        title: "Invest",
       },
     ],
   },
@@ -34,7 +29,7 @@ export const navigation = [
         link: "/productSearch",
       },
       {
-        title: " Sale ",
+        title: "Sale",
         link: "/productSearch",
       },
       {
