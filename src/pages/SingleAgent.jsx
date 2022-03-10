@@ -5,7 +5,7 @@ import PersonalInfo from "../components/findAgent/SingleAgent/PersonalInfo";
 
 const SingleAgent = () => {
   return (
-    <div className="p-5 lg:p-10 grid gap-20 md:grid-cols-2 lg:grid-cols-3">
+    <div className="p-5 lg:p-10 grid gap-10 lg:gap-20 md:grid-cols-2 lg:grid-cols-3">
       <div className="lg:col-span-2 space-y-10">
         <PersonalInfo />
         <About />
@@ -13,7 +13,6 @@ const SingleAgent = () => {
       <div>
         <ContactForm />
       </div>
-      
     </div>
   );
 };

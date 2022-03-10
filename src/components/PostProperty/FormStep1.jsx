@@ -131,7 +131,7 @@ const FormStep1 = ({ setFormStep }) => {
               </button>
             </div>
           </div>
-          <button className="text-white bg-red-700 font-semibold flex space-x-3 p-2 rounded items-center">
+          <button className="text-white bg-red-700 font-semibold flex space-x-3 p-2 px-5 rounded items-center">
             <FaPlus className="w-5 h-5 " />
             <span>Add New</span>
           </button>

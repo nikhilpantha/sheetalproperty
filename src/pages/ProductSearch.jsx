@@ -16,7 +16,7 @@ const ProductSearch = () => {
         <FilterCard />
       </div>
       <div className="flex justify-center">
-        <button className="text-white bg-red-700 font-bold text-xl p-2 px-5 rounded">
+        <button className="text-white bg-red-700 font-semibold p-2 px-5 rounded">
           View More
         </button>
       </div>

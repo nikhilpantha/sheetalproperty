@@ -44,7 +44,7 @@ const PropertyDemandTable = () => {
           <div className="overflow-hidden border border-gray-200 ">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
-                <tr>
+                <tr className="grid grid-cols-6 items-start justify-between">
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -85,7 +85,10 @@ const PropertyDemandTable = () => {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {people.map((person) => (
-                  <tr key={person.email} className="">
+                  <tr
+                    key={person.email}
+                    className="grid grid-cols-6 justify-between items-start"
+                  >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       {person.title}
                     </td>
@@ -110,7 +113,9 @@ const PropertyDemandTable = () => {
                             {person.facilities.slice(2).map((item, index) => (
                               <Disclosure.Panel
                                 key={index}
-                                className="transition-all delay-150"
+                                className={`${
+                                  open ? "block" : "hidden"
+                                } duration-500 `}
                               >
                                 <li>{item}</li>
                               </Disclosure.Panel>

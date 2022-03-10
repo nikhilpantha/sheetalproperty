@@ -1,31 +1,18 @@
 import React, { useState } from "react";
 import InputBox from "./InputBox";
+import { searchNav } from "../../Object/serachNav";
 
-const searchNav = [
-  {
-    name: "Buy",
-  },
-  {
-    name: "Rent",
-  },
-  {
-    name: "House & Land",
-  },
-  {
-    name: "New Homes",
-  },
-  {
-    name: "Invest",
-  },
-];
-const Search = () => {
-  const [active, setActive] = useState("");
+const Search = ({ passActive }) => {
+  const [pactive, setPActive] = useState({ passActive });
+  const [active, setActive] = useState();
+  console.log(passActive);
+  console.log(active);
 
   return (
     <>
       <div className="flex justify-center px-5 md:px-10">
         <div className="w-full xl:w-9/12 -mt-40 md:-mt-32 md:bg-white rounded md:shadow-xl md:border border-gray-100 md:p-5 lg:p-10">
-          <div className="flex xl:w-4/5  text-lg items-center justify-start font-bold overflow-x-scroll">
+          <div className="flex xl:w-4/5  sm:text-lg items-center justify-start font-bold overflow-x-auto">
             {searchNav.map((item, index) => (
               <button
                 key={index}

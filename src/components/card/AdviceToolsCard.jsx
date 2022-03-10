@@ -15,10 +15,9 @@ const AdviceToolsCard = ({ item }) => {
           <div className="text-gray-600 text">{item.description}</div>
           <a
             href={item.href}
-            className="text-red-700 flex items-center space-x-2 text-xl"
+            className="text-red-700 flex items-center space-x-2 text-lg"
           >
             <span>Read More</span>
-            <BsArrowRight className="w-6 h-6" />
           </a>
         </div>
       </div>

@@ -26,7 +26,7 @@ const TopBar = () => {
             <RiArrowDownSLine className="w-5 h-5" />
           </button>
           <a
-            href="/"
+            href="/postProperty"
             className="px-5 py-3 bg-red-700 text-lg text-white capitalize rounded-lg"
           >
             post property{" "}

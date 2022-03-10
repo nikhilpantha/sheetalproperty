@@ -79,16 +79,18 @@ const LinkBanks = () => {
               Max Tenure{" "}
               <span className="font-bold text-black">{bank.year} years</span>
             </span>
-            <Link to="/payRentOnline">
-              <button className="p-3 rounded text-white font-bold bg-red-700">
-                Apply now
-              </button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/payRentOnline">
+                <button className="p-2 px-3 rounded text-white bg-red-700">
+                  Apply now
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
       <div className="text-center">
-        <button className="p-5 px-10 text-white bg-red-700 font-bold text-xl rounded-lg">
+        <button className=" py-3 px-5 text-white bg-red-700 font-medium rounded-lg">
           +99 more
         </button>
       </div>

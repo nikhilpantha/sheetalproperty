@@ -47,7 +47,6 @@ function App() {
             <Route path="/productSearch" element={<ProductSearch />} />
             <Route path="/investDetail" element={<InvestDetails />} />
             <Route path="/project" element={<Project />} />
-
             <Route
               path="/investment/viewallproduct"
               element={<InvestmentAllProduct />}

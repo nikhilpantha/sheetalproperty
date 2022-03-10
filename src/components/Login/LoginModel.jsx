@@ -16,11 +16,7 @@ const LoginModel = ({ r, setR }) => {
 
   return (
     <Transition.Root show={r} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed z-10 inset-0 overflow-y-auto"
-        onClose={setR}
-      >
+      <Dialog as="div" className="fixed z-10 inset-0" onClose={setR}>
         <div className="flex items-end justify-center min-h-screen sm:pt-4 sm:px-4 sm:pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
@@ -49,7 +45,7 @@ const LoginModel = ({ r, setR }) => {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block align-bottom bg-white rounded text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full h-screen sm:h-auto">
+            <div className="inline-block align-bottom bg-white rounded text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full h-screen sm:h-auto">
               <Tab.Group>
                 <Tab.List className="flex p-1 space-x-1 bg-red-700 text-white ">
                   {Object.keys(categories).map((category) => (

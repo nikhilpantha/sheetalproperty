@@ -16,7 +16,7 @@ const EmiCalculator = () => {
               placeholder="Rs.25,00,000"
             />
           </label>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             <label className="flex flex-col space-y-3">
               <span className="font-light">Tenure</span>
               <input

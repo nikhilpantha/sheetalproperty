@@ -1,118 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import LoginModel from "../../Login/LoginModel";
+import { navigation } from "./navigation";
 
 const Sidebar = () => {
   const [r, setR] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const navigation = [
-    {
-      link: "/",
-      title: "Find Property",
-      subTitle: [
-        {
-          title: "Buy ",
-          link: "/",
-        },
-        {
-          title: " Rent",
-          link: "/",
-        },
-        {
-          title: "House and land",
-          link: "/",
-        },
-        {
-          title: "new house",
-          link: "/",
-        },
-        {
-          title: "trural",
-          link: "/",
-        },
-      ],
-    },
-    {
-      link: "/",
-      title: "Property Service",
-      subTitle: [
-        {
-          title: "Buy",
-          link: "/productSearch",
-        },
-        {
-          title: " Sale ",
-        },
-        {
-          title: "Rent",
-
-          link: "/productSearch",
-        },
-        {
-          title: "Invest",
-          link: "/productSearch",
-        },
-        {
-          title: "Projects",
-          link: "/productSearch/",
-        },
-      ],
-    },
-    {
-      link: "/",
-      title: "Property Demand",
-    },
-    {
-      link: "/requirementForm",
-      title: "Requirement form",
-    },
-    {
-      link: "/findAgent",
-      title: "Find Agent",
-    },
-    {
-      link: "/",
-      title: "Other service",
-      subTitle: [
-        {
-          title: "Rent Service",
-          link: "#",
-        },
-        {
-          title: "Home Lone",
-          link: "/homeLone",
-        },
-        {
-          title: "Pay Rent Online",
-          link: "/payRentOnline",
-        },
-        {
-          title: "legal Help",
-          link: "/legalHelp",
-        },
-
-        // {
-        //   title: "Buy/sell services",
-        //   link: "#",
-        // },
-
-        // {
-        //   title: "property lawyers",
-        //   link: "/",
-        // },
-        // {
-        //   title: "Home inspection",
-        //   link: "/",
-        // },
-        // {
-        //   title: "design and Decor",
-        //   link: "/",
-        // },
-      ],
-    },
-  ];
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");

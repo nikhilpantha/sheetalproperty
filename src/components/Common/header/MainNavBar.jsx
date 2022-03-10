@@ -1,128 +1,37 @@
-import React from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
+import HomeSearch from "../SearchBox/HomeSearch";
+import { navigation } from "./navigation";
+import "animate.css";
 
 const MainNavBar = () => {
-  const navigation = [
-    {
-      link: "/",
-      title: "Find Property",
-      subTitle: [
-        {
-          title: "Buy ",
-          link: "/",
-        },
-        {
-          title: " Rent",
-          link: "/",
-        },
-        {
-          title: "House and land",
-          link: "/",
-        },
-        {
-          title: "new house",
-          link: "/",
-        },
-        {
-          title: "trural",
-          link: "/",
-        },
-      ],
-    },
-    {
-      link: "/",
-      title: "Property Service",
-      subTitle: [
-        {
-          title: "Buy",
-          link: "/productSearch",
-        },
-        {
-          title: " Sale ",
-        },
-        {
-          title: "Rent",
+  const [screen, setScreen] = useState(false);
 
-          link: "/productSearch",
-        },
-        {
-          title: "Invest",
-          link: "/productSearch",
-        },
-        {
-          title: "Projects",
-          link: "/productSearch/",
-        },
-      ],
-    },
-    {
-      link: "/",
-      title: "Property Demand",
-      subTitle: [],
-    },
-    {
-      link: "/requirementForm",
-      title: "Requirement form",
-      subTitle: [],
-    },
-    {
-      link: "/findAgent",
-      title: "Find Agent",
-      subTitle: [],
-    },
-    {
-      link: "/",
-      title: "Other service",
-      subTitle: [
-        {
-          title: "Rent Service",
-          link: "#",
-        },
-        {
-          title: "Home Lone",
-          link: "/homeLone",
-        },
-        {
-          title: "Pay Rent Online",
-          link: "/payRentOnline",
-        },
-        {
-          title: "legal Help",
-          link: "/legalHelp",
-        },
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 200) setScreen(true);
+      else setScreen(false);
+    });
+  }, []);
+  const [passActive, setPassActive] = useState("");
 
-        // {
-        //   title: "Buy/sell services",
-        //   link: "#",
-        // },
-
-        // {
-        //   title: "property lawyers",
-        //   link: "/",
-        // },
-        // {
-        //   title: "Home inspection",
-        //   link: "/",
-        // },
-        // {
-        //   title: "design and Decor",
-        //   link: "/",
-        // },
-      ],
-    },
-  ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
 
   return (
-    <div className="bg-red-700 px-5 lg:px-10 h-16 py-2 flex space-x-2 items-center justify-between">
+    <div
+      className={`${
+        screen
+          ? "fixed top-0 z-50 w-full animate__animated animate__fadeInDown"
+          : "relative"
+      } left-0 right-0 bg-red-700 px-5 lg:px-10 h-16 py-2 flex space-x-2 items-center justify-between`}
+    >
       {navigation.map((item, index) => (
         <Menu key={index} as="div" className="text-left">
           <div className="flex">
-            <Menu.Button className="inline-flex items-center justify-start text-md w-full text-white py-2 hover:border-b-2 hover:border-white">
+            <Menu.Button className="inline-flex items-center justify-start text-md w-full text-white py-2 hover:border-b hover:border-white ">
               {item.subTitle.length > 0 ? (
                 <>
                   {item.title}
@@ -149,26 +58,42 @@ const MainNavBar = () => {
                     {({ active }) => (
                       <>
                         {item.subTitle.map((sub, index) => (
-                          <>
+                          <div key={index}>
                             {sub.link === "#" ? (
                               <span className="block px-4 py-2 text-sm capitalize font-medium border-y">
                                 {sub.title}
                               </span>
                             ) : (
-                              <a
-                                href={sub.link}
-                                key={index}
-                                className={classNames(
-                                  active
-                                    ? "bg-gray-100 text-gray-900 "
-                                    : "text-gray-700",
-                                  "block px-4 py-2 text-sm capitalize"
+                              <>
+                                {" "}
+                                {item.title === "Find Property" ? (
+                                  <button
+                                    onClick={() => setPassActive(sub.title)}
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900 "
+                                        : "text-gray-700",
+                                      "block px-4 py-2 text-sm capitalize"
+                                    )}
+                                  >
+                                    {sub.title}
+                                  </button>
+                                ) : (
+                                  <a
+                                    href={sub.link}
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900 "
+                                        : "text-gray-700",
+                                      "block px-4 py-2 text-sm capitalize"
+                                    )}
+                                  >
+                                    {sub.title}
+                                  </a>
                                 )}
-                              >
-                                {sub.title}
-                              </a>
+                              </>
                             )}
-                          </>
+                          </div>
                         ))}
                       </>
                     )}
@@ -179,6 +104,9 @@ const MainNavBar = () => {
           )}
         </Menu>
       ))}
+      <div className="hidden">
+        <HomeSearch passActive={passActive} />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import ContactModel from "./ContactModel";
@@ -29,8 +29,7 @@ const product = {
   report: "Sold Outs",
 };
 
-const Details = () => {
-  const [open, setOpen] = useState(false);
+const Details = ({ setOpen }) => {
   return (
     <>
       <div className="md:grid grid-cols-12 items-center gap-10 pt-24 py-10 px-5 lg:pl-10">
@@ -82,7 +81,7 @@ const Details = () => {
               <span className="font-semibold text-lg">{product.parking}</span>
             </div>
           </div>
-          <div className="grid grid-cols-2  sm:flex-row space-y-5 sm:space-x-5  sm:space-y-0 items-center">
+          <div className="grid grid-cols-2 sm:flex  sm:flex-row space-y-5 sm:space-x-5  sm:space-y-0 items-center">
             <button
               onClick={() => setOpen(true)}
               className="col-span-2 px-5 py-3 text-white font-bold bg-red-700 rounded-lg"
@@ -99,7 +98,6 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <ContactModel open={open} setOpen={setOpen} />
     </>
   );
 };

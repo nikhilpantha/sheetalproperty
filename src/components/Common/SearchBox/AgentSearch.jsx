@@ -7,14 +7,22 @@ const AgentSearch = () => {
       <label className="col-span-2 flex flex-col">
         <span className="font-semibold">Location</span>
         <div className="border border-gray-300 rounded overflow-hidden flex justify-between items-center p-2">
-          <input type={"text"} placeholder="Neighbourhood/City/Zip" />
+          <input
+            type={"text"}
+            placeholder="Neighbourhood/City/Zip"
+            className="w-full outline-none"
+          />
           <FaSearch className="text-red-700 w-5 h-5" />
         </div>
       </label>
       <label className="col-span-2 flex flex-col">
         <span className="font-semibold">Name</span>
         <div className="border border-gray-300 rounded overflow-hidden flex justify-between items-center p-2">
-          <input type={"text"} placeholder="Agent Name" />
+          <input
+            type={"text"}
+            placeholder="Agent Name"
+            className="w-full outline-none"
+          />
           <FaSearch className="text-red-700 w-5 h-5" />
         </div>
       </label>

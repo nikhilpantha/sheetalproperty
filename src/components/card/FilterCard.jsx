@@ -26,7 +26,7 @@ const FilterCard = () => {
                 </h1>
                 <h1 className="text-sm">from {product.address} </h1>
               </div>
-              <FiHeart className="w-10 h-10 text-red-700" />
+              <FiHeart className="w-8 h-8 text-red-700" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-5">
               <div className="flex flex-col">
@@ -55,7 +55,7 @@ const FilterCard = () => {
               </div>
             </div>
             <div className="flex  justify-end">
-              <button className="bg-red-700 rounded text-white text-lg font-semibold px-5 py-2 w-full sm:w-auto">
+              <button className="bg-red-700 rounded text-white font-medium px-5 py-2 w-full sm:w-auto">
                 Details
               </button>
             </div>

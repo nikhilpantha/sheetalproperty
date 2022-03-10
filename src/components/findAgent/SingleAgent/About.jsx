@@ -24,15 +24,15 @@ const arrayvals = [
 const About = () => {
   return (
     <div className="space-y-10">
-      <div className="text-gray-500 text-sm flex flex-col space-y-5">
-        <h1 className="text-xl font-light">About us</h1>
+      <div className="text-sm flex flex-col space-y-5">
+        <h1 className="text-xl font-medium">About us</h1>
         <div className="space-y-3">
           <p>Realtor-Broker (22 years experience)</p>
           <p>
             Specialties: Buyer's agent, Listing agent, Relocation, Consulting,
             Property Management
           </p>
-          <p>
+          <p className="text-gray-600">
             For most families, their home is their largest financial asset, and
             deciding to sell it is a big decision that involves a lot of
             preparation and work. When you're ready to sell it's important to
@@ -41,10 +41,12 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="lg:w-3/2 border border-gray-400 rounded p-5">
-        <div className="font-bold text-xl py-5">Professional Information</div>
-        <ul className="grid grid-cols-3 gap-10 text-gray-600">
-          <div className="grid gap-2">
+      <div className="lg:w-2/3 border-t xs:border border-gray-300 xs:rounded py-5 xs:p-5">
+        <div className="font-medium text-xl py-5 text-center">
+          Professional Information
+        </div>
+        <ul className="flex xs:grid xs:grid-cols-2 gap-5 sm:gap-10 text-gray-600">
+          <div className="grid gap-2 text-sm sm:text-base">
             <li className="">Broker Address:</li>
             <li className="">Cell Phone:</li>
             <li className="">Broker Address:</li>
@@ -55,9 +57,11 @@ const About = () => {
             <li className="">RealEstate Licenses:</li>
             <li className="">Other Licenses:</li>
           </div>
-          <div className="grid gap-2 col-span-2">
+          <div className="grid gap-2">
             {arrayvals.map((value, index) => (
-              <li key={index}>{value}</li>
+              <li key={index} className="font-medium text-sm sm:text-base">
+                {value}
+              </li>
             ))}
           </div>
         </ul>

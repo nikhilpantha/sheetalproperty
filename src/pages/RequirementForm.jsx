@@ -1,22 +1,6 @@
-import { Fragment, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
-import { MultiSelect } from "../components/Common/SelectBox";
+import React from "react";
 
 const RequirementForm = () => {
-  const people = [
-    { id: 1, name: "Rent" },
-    { id: 2, name: "Buy" },
-    { id: 3, name: "Invest" },
-  ];
-  console.log(people[2]);
-
-  const [selected, setSelected] = useState(people[2]);
-
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
-
   return (
     <div className="flex justify-center px-5 py-10 sm:p-5 lg:p-10 xl:p-24">
       <div className="w-full">
@@ -28,7 +12,7 @@ const RequirementForm = () => {
             <span>Name *</span>
             <input
               type="text"
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your name"
             />
           </label>
@@ -36,7 +20,7 @@ const RequirementForm = () => {
             <span>Temporary Address *</span>
             <input
               type={"text"}
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your temporary address"
             />
           </label>
@@ -44,7 +28,7 @@ const RequirementForm = () => {
             <span>Permanent Address *</span>
             <input
               type={"text"}
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your permanent address"
             />
           </label>
@@ -52,7 +36,7 @@ const RequirementForm = () => {
             <span>Contact number *</span>
             <input
               type={"Number"}
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your contact number"
             />
           </label>
@@ -60,35 +44,35 @@ const RequirementForm = () => {
             <span>Email Address *</span>
             <input
               type={"email"}
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your email address"
             />
           </label>
           <label className="flex flex-col space-y-2">
             <span>Occupation *</span>
             <input
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your email address"
             />
           </label>
           <label className="flex flex-col space-y-2">
             <span>Preferred location</span>
             <input
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your preferred location"
             />
           </label>
           <label className="flex flex-col space-y-2">
             <span>Maximum budget</span>
             <input
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your maximum budget"
             />
           </label>
           <label className="flex flex-col space-y-2">
             <span>Tenant option</span>
             <select
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your maximum budget"
             >
               <option value="rent">Rent</option>
@@ -99,7 +83,7 @@ const RequirementForm = () => {
           <label className="flex flex-col space-y-2">
             <span>Tenant option</span>
             <select
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               size={1}
             >
               <option value="">Enter tenant option</option>
@@ -113,7 +97,7 @@ const RequirementForm = () => {
             <span> Description (if any)</span>
             <textarea
               rows={7}
-              className="text-xl text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="text-gray-500 border border-gray-300 w-full p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Enter your name"
             />
           </label>
@@ -131,7 +115,7 @@ export default RequirementForm;
 {
   /* <Listbox value={selected} onChange={setSelected}>
 <div className="relative mt-1 rounded focus:outline-none focus:ring-2 focus:ring-red-700">
-  <Listbox.Button className="relative w-full p-3 text-left bg-white  cursor-default focus:outline-none sm:text-sm text-xl text-gray-500 border border-gray-300 rounded  focus:ring-2 focus:ring-red-700">
+  <Listbox.Button className="relative w-full p-3 text-left bg-white  cursor-default focus:outline-none sm:text-sm text-gray-500 border border-gray-300 rounded  focus:ring-2 focus:ring-red-700">
     <span className="block truncate">{selected.name}</span>
     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
       <SelectorIcon
