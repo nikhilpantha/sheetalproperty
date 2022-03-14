@@ -2,7 +2,7 @@ import React from "react";
 
 const AdviceToolsCard = ({ item }) => {
   return (
-    <div className="w-full xs:w-64 sm:w-80 bg-white rounded-md shadow-lg border-2 border-gray-200">
+    <div className="w-full bg-white rounded-md shadow-lg border-2 border-gray-200">
       <div className="rounded-md overflow-hidden">
         <img
           src={`/advanceTools/${item.image}`}

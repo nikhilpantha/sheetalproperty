@@ -26,7 +26,7 @@ const MainNavBar = () => {
         screen
           ? "fixed top-0 z-50 w-full animate__animated animate__fadeInDown"
           : "relative"
-      } left-0 right-0 bg-red-700 px-5 lg:px-10 h-16 py-2 flex space-x-2 items-center justify-between`}
+      } left-0 right-0 z-10 bg-red-700 px-5 lg:px-10 h-16 py-2 flex space-x-2 items-center justify-between`}
     >
       {navigation.map((item, index) => (
         <Menu key={index} as="div" className="text-left">

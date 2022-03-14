@@ -15,13 +15,13 @@ const Header = () => {
         </div>
         <div className="flex items-center space-x-6">
           <div className="hidden md:flex items-center space-x-6">
-            <button>
+            <a href="/myProfile?section=messages">
               <HiMail className="w-7 h-7" />
-            </button>
-            <button className="relative">
+            </a>
+            <a href="/" className="relative">
               <span className="absolute top-0 right-0 w-2.5 h-2.5 border-2 rounded-full bg-white border-red-700 "></span>
               <FaBell className="w-5 h-5" />
-            </button>
+            </a>
             <div className="flex items-center space-x-2">
               <span className="underline">ramparajuli</span>
               <FiChevronDown className="w-5 h-5" />

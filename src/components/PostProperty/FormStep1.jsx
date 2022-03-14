@@ -1,8 +1,10 @@
 import { XIcon } from "@heroicons/react/outline";
+import { Button } from "@material-ui/core";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
 import { MdOutlineDriveFolderUpload } from "react-icons/md";
+import FormArray from "./FormArray";
 
 const FormStep1 = ({ setFormStep }) => {
   return (
@@ -10,10 +12,27 @@ const FormStep1 = ({ setFormStep }) => {
       <div className="flex flex-col items-center flex-shrink-0 lg:px-4 border-r-2 ">
         <div className={`relative m-4`}>
           <img className="w-full h-auto" src="noUser.png" alt="Workflow" />
-          <button className="absolute bottom-0 left-0 right-0 w-full bg-opacity-70 bg-black text-white py-2 flex space-x-2 justify-center">
-            <span>Upload</span>
-            <MdOutlineDriveFolderUpload className="w-5 h-5" />
-          </button>
+          <form>
+            <div className="absolute bottom-0 left-0 right-0 w-full bg-opacity-70 bg-black text-white py-2 flex space-x-2 justify-center">
+              <input
+                type="file"
+                accept="image/*"
+                style={{ display: "none" }}
+                id="contained-button-file"
+              />
+              <label htmlFor="contained-button-file">
+                <Button
+                  variant="contained"
+                  style={{ backgroundColor: "none" }}
+                  component="span"
+                  className="w-full bg-opacity-70 bg-black text-white py-2 flex space-x-2 justify-center"
+                >
+                  <span>Upload</span>
+                  <MdOutlineDriveFolderUpload className="w-5 h-5" />
+                </Button>
+              </label>
+            </div>
+          </form>
         </div>
         <div className="">Insert your property image</div>
       </div>
@@ -104,38 +123,7 @@ const FormStep1 = ({ setFormStep }) => {
           </div>
         </form>
         <div className="text-lg font-semibold">Additional features</div>
-        <form className="space-y-4 lg:space-y-8">
-          <div className="grid sm:grid-cols-3 gap-8 items-end">
-            <label className="flex flex-col space-y-2">
-              <span>Size Prefix</span>
-              <input
-                type="text"
-                placeholder="Anna, Dhur"
-                className="w-full p-2 border border-gray-400 rounded"
-              />
-            </label>
-            <label className="flex flex-col space-y-2">
-              <span>Size Prefix</span>
-              <input
-                type="text"
-                placeholder="Anna, Dhur"
-                className="w-full p-2 border border-gray-400 rounded"
-              />
-            </label>
-            <div className="flex sm:block justify-end sm:w-fit sm:h-fit">
-              <button className="p-2 border border-gray-400 rounded flex">
-                <span className="inline-block sm:hidden text-gray-400 pr-2">
-                  Clear
-                </span>
-                <XIcon className="text-gray-400 w-6 h-6" />
-              </button>
-            </div>
-          </div>
-          <button className="text-white bg-red-700 font-semibold flex space-x-3 p-2 px-5 rounded items-center">
-            <FaPlus className="w-5 h-5 " />
-            <span>Add New</span>
-          </button>
-        </form>
+        <FormArray />
         <div className="flex justify-end">
           <button
             onClick={() => {
