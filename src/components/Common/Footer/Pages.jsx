@@ -9,13 +9,13 @@ const Pages = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/">About US</a>
+            <a href="/findAgent">Fond Agent</a>
           </li>
           <li>
-            <a href="/">Services</a>
+            <a href="/homeLone">Services</a>
           </li>
           <li>
-            <a href="/">New Blog</a>
+            <a href="/propertyDemand">Property Demand</a>
           </li>
         </ul>
       </div>
