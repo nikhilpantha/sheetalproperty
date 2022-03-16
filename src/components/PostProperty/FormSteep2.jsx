@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "@material-ui/core";
+import { MdOutlineDriveFolderUpload } from "react-icons/md";
 
 const PropertyFeature = [
   {
@@ -169,9 +171,31 @@ const FormSteep2 = () => {
           </label>
           <div className="space-y-5">
             <h1>Attachment</h1>
-            <button className="bg-red-700 px-5 py-2 text-white rounded">
-              Select Attachment
-            </button>
+            <input
+              type="file"
+              style={{ display: "none" }}
+              id="contained-button-file"
+            />
+            <label htmlFor="contained-button-file">
+              {/* <Button
+                variant="contained"
+                style={{ backgroundColor: "none" }}
+                component="span"
+                className="w-full bg-opacity-70 bg-black text-white py-2 flex space-x-2 justify-center"
+              >
+                <span>Upload</span>
+                <MdOutlineDriveFolderUpload className="w-5 h-5" />
+              </Button> */}
+              <Button
+                variant="contained"
+                component="span"
+                style={{ backgroundColor: "#B91C1B", color: "white" }}
+                className="bg-red-700 px-5 py-2  rounded"
+              >
+                Select Attachment
+              </Button>
+            </label>
+
             <p className="text-sm text-gray-500">
               You can attach PDF files, Map images OR other documents to provide
               further details related to property.

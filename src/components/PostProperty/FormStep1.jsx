@@ -1,8 +1,6 @@
-import { XIcon } from "@heroicons/react/outline";
 import { Button } from "@material-ui/core";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { FaPlus } from "react-icons/fa";
 import { MdOutlineDriveFolderUpload } from "react-icons/md";
 import FormArray from "./FormArray";
 
