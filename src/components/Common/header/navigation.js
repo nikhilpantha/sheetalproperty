@@ -66,10 +66,6 @@ export const navigation = [
     title: "Other service",
     subTitle: [
       {
-        title: "Rent Service",
-        link: "#",
-      },
-      {
         title: "Home Loan",
         link: "/homeLone",
       },
