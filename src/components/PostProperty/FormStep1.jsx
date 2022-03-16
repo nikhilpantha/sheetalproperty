@@ -21,7 +21,7 @@ const FormStep1 = ({ setFormStep }) => {
               <label htmlFor="contained-button-file">
                 <Button
                   variant="contained"
-                  style={{ backgroundColor: "none" }}
+                  style={{ backgroundColor: "#B91C1B", color: "white" }}
                   component="span"
                   className="w-full bg-opacity-70 bg-black text-white py-2 flex space-x-2 justify-center"
                 >
