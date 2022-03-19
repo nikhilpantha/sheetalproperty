@@ -4,12 +4,11 @@ import { FaHeart, FaRegHeart, FaUserCircle } from "react-icons/fa";
 const PropertyCard = () => {
   return (
     <div className="grid sm:grid-cols-5 items-center border border-gray-200 shadow-xl rounded overflow-hidden">
-      <div
-        className="w-full bg-cover bg-center h-48 sm:h-full sm:col-span-2 "
-        style={{
-          backgroundImage: `url("/fetured/unsplash_g39p1kDjvSY1.png")`,
-        }}
-      ></div>
+      <img
+        src="/fetured/unsplash_178j8tJrNlc.png"
+        alt="/fetured/unsplash_178j8tJrNlc"
+        className="w-full h-full sm:col-span-2"
+      />
       <div className="p-5 sm:col-span-3  space-y-4 text-sm lg:text-base">
         <div className="flex items-center space-x-3">
           <FaUserCircle className="text-red-700 w-10 h-10" />
@@ -35,9 +34,12 @@ const PropertyCard = () => {
 
         <div className="font-light">Golfutar, Kathmandu</div>
         <div className="flex justify-end">
-          <button className="text-white px-3 py-2 rounded bg-red-700">
+          <a
+            href="/singleProduct"
+            className="text-white px-3 py-2 rounded bg-red-700"
+          >
             View Property
-          </button>
+          </a>
         </div>
       </div>
     </div>

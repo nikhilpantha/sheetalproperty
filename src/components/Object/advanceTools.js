@@ -3,7 +3,7 @@ export const advanceTools = [
     image: "legal.png",
     title: "Legal Title Search",
     description: "Get end to end legal Assistance on your Property Documents.",
-    href: "/",
+    href: "/legalHelp",
   },
   {
     image: "finance.png",

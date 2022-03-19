@@ -80,7 +80,7 @@ const Sidebar = () => {
                       aria-label="Sidebar"
                     >
                       {navigation.map((item) =>
-                        !item.subTitle ? (
+                        item.subTitle.length === 0 ? (
                           <div key={item.title}>
                             <a
                               href={item.link}

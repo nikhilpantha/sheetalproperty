@@ -17,22 +17,15 @@ const Contact = () => {
         </div>
         <div className="col-span-11 ">
           {" "}
-          <a href="tel-9898989898">+977 989898989</a>
+          <a href="tel: 9898989898">+977 989898989</a>
         </div>
         <div className="">
           <HiMail className="w-6 h-6" />
         </div>
-        <div className="col-span-10">info@shetalgmail.com</div>
+        <div className="col-span-10">
+          <a href="mailto: info@shetalgmail.com">info@shetalgmail.com </a>
+        </div>
       </div>
-      {/* <div className="capitalize">contact us</div>
-      <a href="tel-9898989898" className="flex items-center space-x-2">
-        <FaPhone className="w-4 h-4 rotate-90" />
-        <span>+977 9898989898</span>
-      </a>
-      <a href="/" className="flex items-center space-x-2">
-        <HiMail className="w-5 h-5" />
-        <span>info@shetalgmail.com</span>
-      </a> */}
     </div>
   );
 };
