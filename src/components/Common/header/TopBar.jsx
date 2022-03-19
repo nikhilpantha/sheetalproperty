@@ -5,7 +5,7 @@ import UserLogin from "./UserLogin";
 
 const TopBar = () => {
   const [r, setR] = useState(false);
-  const [logged, setLogged] = useState(true);
+  const [logged, setLogged] = useState(false);
 
   return (
     <>

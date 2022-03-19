@@ -29,7 +29,7 @@ const Register = () => {
               placeholder="Username or Email"
             />
           </label>
-          <label className="flex space-x-3 border-b-2 border-gray-400 py-3 pl-2 items-center">
+          <label className="flex space-x-3 border-b-2 border-gray-400 py-2 px-3 items-center">
             <MdEmail className="w-7 h-7 text-gray-400" />
             <input
               type="email"

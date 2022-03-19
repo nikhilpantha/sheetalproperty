@@ -1,4 +1,5 @@
 import React from "react";
+import { FaSearch } from "react-icons/fa";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { rateAndTrand } from "../components/Object/rateAndTrand";
 import SingleRate from "../components/RateAndTrends/SingleRate";
@@ -8,13 +9,16 @@ const RateAndTrends = () => {
     <div className="p-5 lg:p-10">
       <div className="text-center py-10 text-2xl">Rate And Trends</div>
       <div className="flex justify-center w-full">
-        <div className="flex justify-center w-3/4 lg:w-1/2 border border-gray-300 rounded overflow-hidden">
+        <div className="flex justify-center w-full sm:w-3/4 lg:w-1/2 border border-gray-300 rounded overflow-hidden">
           <input
-            className="w-full p-3"
+            className="w-full p-3 outline-none"
             placeholder="City, Locality, Projects"
           />
-          <button className="bg-red-700 text-white w-auto p-3 whitespace-nowrap">
-            Show Trends
+          <button className="bg-red-700 text-white w-auto px-5 p-3 whitespace-nowrap">
+            <span className="hidden sm:block">Show Trends</span>
+            <snap className="block sm:hidden">
+              <FaSearch className="w-5 h-5" />
+            </snap>
           </button>
         </div>
       </div>
