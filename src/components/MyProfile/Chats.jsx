@@ -22,8 +22,8 @@ const text = [
 
 const Chats = () => {
   return (
-    <div className="p-5 md:p-10 space-x-10 s flex py-20">
-      <div>
+    <div className="p-5 md:p-10 sm:space-x-5 md:space-x-10 flex sm:py-20">
+      <div className="hidden sm:block">
         <img
           src="/noUser.png"
           alt="noUser"
@@ -51,18 +51,26 @@ const Chats = () => {
                     alt="noUser"
                     className="w-8 h-8 rounded-full"
                   />
-                  <div className="p-2 px-5 border">{item.message}</div>
+                  <div className="w-2/3">
+                    <span className="p-2 px-5 border rounded">
+                      {item.message}
+                    </span>
+                  </div>
                 </div>
               ) : (
                 <div
                   key={index}
                   className={`flex space-x-1 justify-end items-center`}
                 >
-                  <div className="p-2 px-5 border">{item.message}</div>
+                  <div className="w-2/3 text-right">
+                    <span className="p-2 px-5 border rounded">
+                      {item.message}
+                    </span>
+                  </div>
                   <img
                     src="/noUser.png"
                     alt="noUser"
-                    className="w-8 h-8 rounded-full"
+                    className="w-8 h-8 rounded-full "
                   />
                 </div>
               )}

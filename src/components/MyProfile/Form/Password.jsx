@@ -13,8 +13,8 @@ const Password = () => {
           Change Password
         </h1>
       </div>
-      <form className="grid gap-10 md:w-1/2">
-        <label className="flex flex-col space-y-3">
+      <form className="grid gap-5 md:w-1/2">
+        <label className="flex flex-col space-y-2">
           <span>Old Password</span>
           <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
             <input
@@ -44,7 +44,7 @@ const Password = () => {
             )}
           </div>
         </label>
-        <label className="flex flex-col space-y-3">
+        <label className="flex flex-col space-y-2">
           <span>New Password</span>
           <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
             <input
@@ -74,7 +74,7 @@ const Password = () => {
             )}
           </div>
         </label>
-        <label className="flex flex-col space-y-3">
+        <label className="flex flex-col space-y-2">
           <span>Confirm New Password</span>
           <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">
             <input
@@ -106,7 +106,7 @@ const Password = () => {
         </label>
       </form>
       <div className="flex justify-end">
-        <button className="text-white font-medium bg-red-700 rounded px-5 py-3">
+        <button className="text-white font-medium bg-red-700 rounded px-5 py-2">
           Update Password
         </button>
       </div>

@@ -93,7 +93,7 @@ const Details = ({ setOpen }) => {
                 Get contact number
               </button>
             </Link>
-            <BsHeart className="w-10 h-10 text-red-700" />
+            <BsHeart className="w-8 h-8 text-red-700" />
           </div>
         </div>
       </div>
