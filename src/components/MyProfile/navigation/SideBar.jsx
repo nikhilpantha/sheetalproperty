@@ -1,7 +1,5 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import Button from "@material-ui/core/Button";
-import PhotoCamera from "@material-ui/icons/PhotoCamera";
-import IconButton from "@material-ui/core/IconButton";
 import {
   CalendarIcon,
   FolderIcon,
@@ -20,7 +18,7 @@ import { MdOutlineDriveFolderUpload } from "react-icons/md";
 const navigation = [
   { name: "My Profile", href: "profile", icon: HomeIcon, current: true },
   {
-    name: "Favourite Properties",
+    name: "favourite Properties",
     href: "favourites",
     icon: UsersIcon,
     current: false,
@@ -48,7 +46,7 @@ const SideBar = ({ menubutton }) => {
   return (
     <>
       <div className="flex">
-        <div className="hidden md:flex md:w-64 flex-col ">
+        <div className="hidden md:flex md:w-72 flex-col ">
           <div className="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex flex-col items-center flex-shrink-0 px-4">
@@ -80,7 +78,9 @@ const SideBar = ({ menubutton }) => {
                     </div>
                   </form>
                 </div>
-                <div className="text-red-700 font-medium">Ram Parajuli</div>
+                <div className="text-red-700 text-xl font-medium">
+                  Ram Parajuli
+                </div>
               </div>
               <nav className="mt-10 flex-1 px-2 bg-white space-y-1">
                 {navigation.map((item) => (

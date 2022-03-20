@@ -7,13 +7,13 @@ const Password = () => {
   const [conformPasswordShown, setConformPasswordShown] = useState(false);
   const [oldPassword, setOldPasswordShown] = useState(false);
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:space-y-10">
       <div className="max-w-7xl mx-auto ">
         <h1 className="text-2xl font-semibold text-gray-900">
           Change Password
         </h1>
       </div>
-      <form className="grid gap-5 md:w-1/2">
+      <form className="grid gap-5 md:gap-10 md:w-2/4">
         <label className="flex flex-col space-y-2">
           <span>Old Password</span>
           <div className="p-2 border border-gray-500 rounded overflow-hidden flex space-x-3 pr-3 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-red-700 focus-visible:ring-offset-2 focus-visible:border-red-700">

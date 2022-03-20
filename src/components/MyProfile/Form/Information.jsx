@@ -2,11 +2,11 @@ import React from "react";
 
 const Information = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:space-y-10">
       <div className="max-w-7xl mx-auto ">
         <h1 className="text-2xl font-semibold text-gray-900">Information</h1>
       </div>
-      <form className="grid md:grid-cols-2 gap-5">
+      <form className="grid md:grid-cols-2 gap-5 md:gap-10">
         <label className="flex flex-col space-y-2">
           <span>Username</span>
           <input
