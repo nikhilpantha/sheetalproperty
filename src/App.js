@@ -22,6 +22,7 @@ import FindAgent from "./pages/FindAgent";
 import ProductSearch from "./pages/ProductSearch";
 import SingleAgent from "./pages/SingleAgent";
 import InvestDetails from "./pages/InvestDetails";
+import Message from "./pages/Message";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="/findAgent" element={<FindAgent />} />
             <Route path="/singleAgent" element={<SingleAgent />} />
             <Route path="/productSearch" element={<ProductSearch />} />
+            <Route path="/myProfile/messages" element={<Message />} />
             <Route path="/investDetail" element={<InvestDetails />} />
             <Route path="/project" element={<Project />} />
             <Route
